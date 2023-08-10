@@ -134,7 +134,7 @@ function listCreate(arr, type) {
     for(let i = 0; i < changeArr.length; i++) {
         list = `
             <div class="skill_list">
-                <img src=${changeArr[i].src}/ alt=${changeArr[i].type}_list_img_${i}>
+                <img src=${changeArr[i].src} alt=${changeArr[i].type}_list_img_${i}>
             </div>
         `
         receive += list;
