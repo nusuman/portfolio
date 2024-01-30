@@ -236,6 +236,9 @@ function totalClickEvent() {
 
       thumNVideoBox.innerHTML = thumnailVideoCreate(index, 0);
 
+      const video = document.querySelector(".thumnail_n_video_box > video");
+      video && videoMaxViewControls(video);
+
       linkBtnArea.innerHTML = linkBtnCreate(index);
 
       projectList.forEach((innerLi) => classDelete(innerLi, "project_on"));
@@ -274,6 +277,10 @@ function handleSubClick(parentIndex, thumArea, infoArea, codeBtnEl) {
 
       infoArea.innerHTML = list;
       thumArea.innerHTML = thumnailVideoCreate(parentIndex, index);
+
+      videoMaxViewControls(
+        document.querySelector(".thumnail_n_video_box > video")
+      );
 
       let curIdx = idxSearch(
         page[parentIndex].pageInfo,
@@ -331,7 +338,7 @@ function thumnailVideoCreate(parentIndex, myIndex) {
         `;
   } else {
     content = `
-            <video controls>
+            <video class=video_thumnail controls>
                 <source src="${myObject.pageInfo[myIndex].videoSrc}" type="video/mp4" />
             </video>
         `;
@@ -425,6 +432,19 @@ function strMaker(nowObjectArr, nowBool = false) {
   return strReturn;
 }
 
+function videoMaxViewControls(el) {
+  const ev = () => {
+    //console.log(el);
+    classDelete(el, "video_thumnail");
+
+    if (!document.fullscreenElement) {
+      classPlus(el, "video_thumnail");
+      document.removeEventListener("fullscreenchange", ev);
+    }
+  };
+
+  document.addEventListener("fullscreenchange", ev);
+}
 /********************** modai_ev ******************/
 const sectionWrapper = document.getElementById("section_wrapper");
 const pagseWithOnlyCalc = document.querySelectorAll(".page");

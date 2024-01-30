@@ -166,11 +166,11 @@ const data = {
         "HOME",
         "BROWSE",
         "PROFILE",
+        "BUCKET DETAIL",
         "ADDBUCKET",
         "SIGN IN",
         "SIGN UP",
         "PWRESEARCH",
-        "BUCKET DETAIL",
         "SEARCH",
       ],
       etcKind: [
@@ -214,7 +214,7 @@ const data = {
           episode: [
             "홈 화면에서는 <span class = accent>자기가 작성한 버킷</span>을 관람 할 수 있고 버킷을 <span class = accent>수정/삭제/달성</span> 할 수 있습니다. <br /> 또한 작성한 버킷이 없을 떄는 버튼을 클릭하여 버킷 작성 페이지로 이동 할 수 있습니다. <br /> 데이터를 한번에 받아오면 장기적으로 성능이 저하되어 사용자 경험에 좋지 않다고 판단하여  <span class = accent>무한 스크롤 방식</span>을 채택하게 되었습니다",
           ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_main_video.mp4"],
+          videoSrc: ["./videos/picket/home.mp4"],
           codeInfo: [
             {
               codeName: "useMyPage.JS",
@@ -247,7 +247,7 @@ const data = {
           episode: [
             "탐색 페이지는 내가 작성한 버킷과 다른 이용자가 작성한 버킷이 공개되는 페이지입니다. <br />따라서 데이터를 한번에 받아오는것은 성능에 지대한 문제가 있다고 판단하여 <span class = accent>무한 스크롤 방식</span>을 채택 하였습니다.<br /> 또한 이용자가 보다 쉽게 버킷을 찾을 수 있게 카테고리 별 분류 기능을 넣었습니다. <br />그리고 <span class = accent>좋아요</span>와 <span class = accent>스크랩</span> 간편 클릭 기능을 추가하여 이용자가 보다 편하게 상호 작용을 할 수 있게 만들었습니다.",
           ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_sub_video.mp4"],
+          videoSrc: ["./videos/picket/browse.mp4"],
           codeInfo: [
             {
               codeName: "useBrowseGetItem.JS",
@@ -280,7 +280,7 @@ const data = {
             /* <span class = accent> */
             "프로필 페이지는 나의 버킷 밑 내가 스크랩한 버킷을 확인 할 수 있는 페이지 입니다. <br /> 그에 맞게 <span class = accent>무한 스크롤 방식</span> 을 채택 하였으며 나의 버킷 한정으로 <span class = accent>버킷 수정/삭제/달성</span>을 할 수 있고 <br /> <span class = accent>프로필 수정</span>도 할 수 있습니다.",
           ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_detail_video.mp4"],
+          videoSrc: ["./videos/picket/profile.mp4"],
           codeInfo: [
             {
               codeName: "useMyProfile.JS",
@@ -299,122 +299,6 @@ const data = {
               themeColor: "skyblue",
               codeType: "PROFILE",
               src: ["https://carbon.now.sh/embed/c229zUofs7EuaRYrZE3B"],
-            },
-          ],
-        },
-        {
-          type: "ADDBUCKET",
-          pageContents: ["이미지 업로드 기능", "달력 기능"],
-          episode: [
-            /* <span class = accent> */
-            "버킷 작성 페이지에서는 이미지와 나의 버킷의 종류를 선택하고 달력을 통해 DDAY를 설정하여 버킷을 작성 할 수 있습니다 <br /> 달력 기능은 <span class = accent>REACT-CALANDER</span> 라이브러리를 사용 했습니다.",
-          ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_cart_video.mp4"],
-          codeInfo: [
-            {
-              codeName: "useAddBucket.JS",
-              themeColor: "yellow",
-              codeType: "ADDBUCKET",
-              src: ["https://carbon.now.sh/embed/7pJMAZK36m0aPFeT30t5"],
-            },
-            {
-              codeName: "INDEX.JSX",
-              themeColor: "orange",
-              codeType: "ADDBUCEKT",
-              src: ["https://carbon.now.sh/embed/nKm3Ck6kLbmlxL2uryqD"],
-            },
-            {
-              codeName: "STYLE.JS",
-              themeColor: "skyblue",
-              codeType: "ADDBUCEKT",
-              src: ["https://carbon.now.sh/embed/A1K7edPq22dP7FjISLPi"],
-            },
-          ],
-        },
-        {
-          type: "SIGN IN",
-          pageContents: ["로그인 기능"],
-          episode: [
-            /* <span class = accent> */
-            "백엔드 개발자 분과 협력하여 <span class = accent>JWT토큰</span>을 사용하여 로그인 방식을 구현 했습니다. <br /> 로그인을 하면 토큰을 <span class = accent>localStorage</span>에 저장하는 방식을 사용 하였습니다. <br/ > 액세스 토큰의 <span class = accent>유효기간이 지나면 자동으로 token을 reissue</span> 시키는 기능을 만들었습니다.",
-          ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_search_video.mp4"],
-          codeInfo: [
-            {
-              codeName: "useSignIn.JS",
-              themeColor: "yellow",
-              codeType: "SIGN IN",
-              src: ["https://carbon.now.sh/embed/FBoWvZ3Ki40Tnh4loI5f"],
-            },
-            {
-              codeName: "INDEX.JSX",
-              themeColor: "orange",
-              codeType: "SIGN IN",
-              src: ["https://carbon.now.sh/embed/NKMJwwHHBSLFa8zpKbOU"],
-            },
-            {
-              codeName: "STYLE.JS",
-              themeColor: "skyblue",
-              codeType: "SIGN IN",
-              src: ["https://carbon.now.sh/embed/X3WvxTZcd6eh1LymGUj4"],
-            },
-          ],
-        },
-        {
-          type: "SIGN UP",
-          pageContents: ["회원가입 기능"],
-          episode: [
-            /* <span class = accent></span> */
-            "회원가입 기능 같은 경우는 성능과 비용을 생각하여 프론트 단에서 최대한 검증을 하고 백엔드쪽으로 넘겨주는 방식을 사용 했습니다. <br /> <span class = accent>1단계 -> 2단계</span>로 이루어지는 <span class = accent>단계식 회원가입</span> 이며 각 단계의 조건을 만족 하지 못할 시 무엇을 만족하지 못했는지 표기를 했고 <br /> <span class = accent>조건을 만족</span> 하여야 다음 단계로 넘어 갈 수 있게 구현 했습니다.",
-          ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_search_video.mp4"],
-          codeInfo: [
-            {
-              codeName: "useSignUp.JS",
-              themeColor: "yellow",
-              codeType: "SIGN UP",
-              src: ["https://carbon.now.sh/embed/owWymZUARfzABa9UGqUu"],
-            },
-            {
-              codeName: "INDEX.JSX",
-              themeColor: "orange",
-              codeType: "SIGN UP",
-              src: ["https://carbon.now.sh/embed/nb6dpoGts139CFXbOk5T"],
-            },
-            {
-              codeName: "STYLE.JS",
-              themeColor: "skyblue",
-              codeType: "SIGN UP",
-              src: ["https://carbon.now.sh/embed/SvQHYy6qc2ma8N6P1gI9"],
-            },
-          ],
-        },
-        {
-          type: "PWRESEARCH",
-          pageContents: ["비밀번호 재 설정 기능"],
-          episode: [
-            /* <span class = accent></span> */
-            "비밀번호 찾기를 누를 시 보안을 위해 원래 비밀번호를 알려주는 것이 아닌 <span class = accent>임시 비밀번호</span>를 발급 해주는 형식으로 해당 기능을 구현 했습니다. <br /> 가입 이메일을 입력 하고 요청 시 <span class = accent>해당 메일로</span> 임시 비밀번호가 발송 됩니다.",
-          ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_search_video.mp4"],
-          codeInfo: [
-            {
-              codeName: "usePwResearch.JS",
-              themeColor: "yellow",
-              codeType: "PWRESEARCH",
-              src: ["https://carbon.now.sh/embed/hXemEbihcOEoTAlT5T8f"],
-            },
-            {
-              codeName: "INDEX.JSX",
-              themeColor: "orange",
-              codeType: "PWRESEARCH",
-              src: ["https://carbon.now.sh/embed/vnYUithEg8PXROtDNT3I"],
-            },
-            {
-              codeName: "STYLE.JS",
-              themeColor: "skyblue",
-              codeType: "PWRESEARCH",
-              src: ["https://carbon.now.sh/embed/gdJ7zWEDDeckufw5aryM"],
             },
           ],
         },
@@ -452,13 +336,130 @@ const data = {
           ],
         },
         {
+          type: "ADDBUCKET",
+          pageContents: ["이미지 업로드 기능", "달력 기능"],
+          episode: [
+            /* <span class = accent> */
+            "버킷 작성 페이지에서는 이미지와 나의 버킷의 종류를 선택하고 달력을 통해 DDAY를 설정하여 버킷을 작성 할 수 있습니다 <br /> 달력 기능은 <span class = accent>REACT-CALANDER</span> 라이브러리를 사용 했습니다.",
+          ],
+          videoSrc: ["./videos/picket/addbucket.mp4"],
+          codeInfo: [
+            {
+              codeName: "useAddBucket.JS",
+              themeColor: "yellow",
+              codeType: "ADDBUCKET",
+              src: ["https://carbon.now.sh/embed/7pJMAZK36m0aPFeT30t5"],
+            },
+            {
+              codeName: "INDEX.JSX",
+              themeColor: "orange",
+              codeType: "ADDBUCEKT",
+              src: ["https://carbon.now.sh/embed/nKm3Ck6kLbmlxL2uryqD"],
+            },
+            {
+              codeName: "STYLE.JS",
+              themeColor: "skyblue",
+              codeType: "ADDBUCEKT",
+              src: ["https://carbon.now.sh/embed/A1K7edPq22dP7FjISLPi"],
+            },
+          ],
+        },
+        {
+          type: "SIGN IN",
+          pageContents: ["로그인 기능"],
+          episode: [
+            /* <span class = accent> */
+            "백엔드 개발자 분과 협력하여 <span class = accent>JWT토큰</span>을 사용하여 로그인 방식을 구현 했습니다. <br /> 로그인을 하면 토큰을 <span class = accent>localStorage</span>에 저장하는 방식을 사용 하였습니다. <br/ > 액세스 토큰의 <span class = accent>유효기간이 지나면 자동으로 token을 reissue</span> 시키는 기능을 만들었습니다.",
+          ],
+          videoSrc: ["./videos/picket/sign_in.mp4"],
+          codeInfo: [
+            {
+              codeName: "useSignIn.JS",
+              themeColor: "yellow",
+              codeType: "SIGN IN",
+              src: ["https://carbon.now.sh/embed/FBoWvZ3Ki40Tnh4loI5f"],
+            },
+            {
+              codeName: "INDEX.JSX",
+              themeColor: "orange",
+              codeType: "SIGN IN",
+              src: ["https://carbon.now.sh/embed/NKMJwwHHBSLFa8zpKbOU"],
+            },
+            {
+              codeName: "STYLE.JS",
+              themeColor: "skyblue",
+              codeType: "SIGN IN",
+              src: ["https://carbon.now.sh/embed/X3WvxTZcd6eh1LymGUj4"],
+            },
+          ],
+        },
+        {
+          type: "SIGN UP",
+          pageContents: ["회원가입 기능"],
+          episode: [
+            /* <span class = accent></span> */
+            "회원가입 기능 같은 경우는 성능과 비용을 생각하여 프론트 단에서 최대한 검증을 하고 백엔드쪽으로 넘겨주는 방식을 사용 했습니다. <br /> <span class = accent>1단계 -> 2단계</span>로 이루어지는 <span class = accent>단계식 회원가입</span> 이며 각 단계의 조건을 만족 하지 못할 시 무엇을 만족하지 못했는지 표기를 했고 <br /> <span class = accent>조건을 만족</span> 하여야 다음 단계로 넘어 갈 수 있게 구현 했습니다.",
+          ],
+          videoSrc: ["./videos/picket/sign_up.mp4"],
+          codeInfo: [
+            {
+              codeName: "useSignUp.JS",
+              themeColor: "yellow",
+              codeType: "SIGN UP",
+              src: ["https://carbon.now.sh/embed/owWymZUARfzABa9UGqUu"],
+            },
+            {
+              codeName: "INDEX.JSX",
+              themeColor: "orange",
+              codeType: "SIGN UP",
+              src: ["https://carbon.now.sh/embed/nb6dpoGts139CFXbOk5T"],
+            },
+            {
+              codeName: "STYLE.JS",
+              themeColor: "skyblue",
+              codeType: "SIGN UP",
+              src: ["https://carbon.now.sh/embed/SvQHYy6qc2ma8N6P1gI9"],
+            },
+          ],
+        },
+        {
+          type: "PWRESEARCH",
+          pageContents: ["비밀번호 재 설정 기능"],
+          episode: [
+            /* <span class = accent></span> */
+            "비밀번호 찾기를 누를 시 보안을 위해 원래 비밀번호를 알려주는 것이 아닌 <span class = accent>임시 비밀번호</span>를 발급 해주는 형식으로 해당 기능을 구현 했습니다. <br /> 가입 이메일을 입력 하고 요청 시 <span class = accent>해당 메일로</span> 임시 비밀번호가 발송 됩니다.",
+          ],
+          videoSrc: ["./videos/picket/pwresearch.mp4"],
+          codeInfo: [
+            {
+              codeName: "usePwResearch.JS",
+              themeColor: "yellow",
+              codeType: "PWRESEARCH",
+              src: ["https://carbon.now.sh/embed/hXemEbihcOEoTAlT5T8f"],
+            },
+            {
+              codeName: "INDEX.JSX",
+              themeColor: "orange",
+              codeType: "PWRESEARCH",
+              src: ["https://carbon.now.sh/embed/vnYUithEg8PXROtDNT3I"],
+            },
+            {
+              codeName: "STYLE.JS",
+              themeColor: "skyblue",
+              codeType: "PWRESEARCH",
+              src: ["https://carbon.now.sh/embed/gdJ7zWEDDeckufw5aryM"],
+            },
+          ],
+        },
+
+        {
           type: "SEARCH",
           pageContents: ["검색 기능", "최근 검색어 기능", "최근 본 버킷 기능"],
           episode: [
             /* <span class = accent></span> */
             "<span class = accent>검색 키워드</span>를 통하여 버킷을 검색 할 수 있습니다. <br /> 또한 편의성을 위해 검색 했을 시 <span class = accent>해당 키워드</span>가 <span class = accent>최근 검색어에 저장</span>이 되고 <br />해당 검색어를 클릭 했을 시 검색이 가능하도록 하였습니다.<br /> <span class = accent>타인/자기 자신의 버킷</span>을 보았을 경우 <span class = accent>최근 본 버킷리스트</span>에 해당 버킷이 추가 될 수 있게 구현 했습니다. <br /> 이러한 기능등을 통해 이용자들이 조금 더 편하게 버킷을 살펴 볼 수 있도록 하였습니다",
           ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_search_video.mp4"],
+          videoSrc: ["./videos/picket/search.mp4"],
           codeInfo: [
             {
               codeName: "useNavBarOptions.JS",
