@@ -12469,7 +12469,7 @@ function linkBtnCreate(myIndex) {
   var innerList = "";
   var receive = "";
   page[myIndex].link.forEach(function (object) {
-    innerList = "\n            <li class=\"".concat(object.className, "\"><a href=\"").concat(object.url, "\" ").concat(object.blank ? "target=_blank" : "", ">").concat(object.ment, "</a></li>\n        ");
+    innerList = "\n      <li class=\"".concat(object.className, "\"><a href=\"").concat(object.url, "\" ").concat(object.blank ? "target=_blank" : "", ">").concat(object.ment, "</a></li>\n        ");
     receive += innerList;
   });
   return receive;
@@ -12650,7 +12650,9 @@ function wheelEvent() {
         prev = (0, _jquery.default)(this).prev().offset().top;
         (0, _jquery.default)("html, body").stop().animate({
           scrollTop: prev
-        }, 600);
+        }, 500, function () {
+          console.log("이동완료");
+        });
       } else if (delta > 0 && nowIndex < pageLength - 1) {
         navigator.removeClass("tab_active");
         navigator.eq(nowIndex + 1).addClass("tab_active");
@@ -12660,7 +12662,9 @@ function wheelEvent() {
         next = (0, _jquery.default)(this).next().offset().top;
         (0, _jquery.default)("html, body").stop().animate({
           scrollTop: next
-        }, 600);
+        }, 500, function () {
+          console.log("이동완료");
+        });
       }
     });
   }, 100);
@@ -12688,7 +12692,7 @@ function navigatorEvent() {
     });
     (0, _jquery.default)("html, body").stop().animate({
       scrollTop: currentOffset
-    }, 600);
+    }, 500);
 
     //prev가 current보다 크면 올라간거고 낮으면 내려간거
     prevOffset = currentOffset;
@@ -12777,7 +12781,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54915" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55580" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

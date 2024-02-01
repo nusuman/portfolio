@@ -353,7 +353,7 @@ function linkBtnCreate(myIndex) {
 
   page[myIndex].link.forEach((object) => {
     innerList = `
-            <li class="${object.className}"><a href="${object.url}" ${
+      <li class="${object.className}"><a href="${object.url}" ${
       object.blank ? "target=_blank" : ""
     }>${object.ment}</a></li>
         `;
@@ -611,7 +611,7 @@ function wheelEvent() {
           {
             scrollTop: prev,
           },
-          600
+          500
         );
       } else if (delta > 0 && nowIndex < pageLength - 1) {
         navigator.removeClass("tab_active");
@@ -626,7 +626,7 @@ function wheelEvent() {
           {
             scrollTop: next,
           },
-          600
+          500
         );
       }
     });
@@ -668,7 +668,7 @@ function navigatorEvent() {
       {
         scrollTop: currentOffset,
       },
-      600
+      500
     );
 
     //prev가 current보다 크면 올라간거고 낮으면 내려간거

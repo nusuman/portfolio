@@ -121,10 +121,29 @@
         justify-content: space-around;
         font-family: $dot_font_dungGeunMo;
         .profile_left {
-          .profile_img {
+          .profile_img_area {
+            position: relative;
             @include item_size(380px, 380px);
             margin: 0 auto 20px;
-            background-color: #fff;
+            cursor: pointer;
+            border: 4px solid white;
+            img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              vertical-align: bottom;
+            }
+            .profile_hover_before {
+              z-index: 10;
+              transition: all 0.2s;
+              &:hover {
+                opacity: 0;
+              }
+            }
           }
           .ment_box_design {
             @include item_size(490px, 80px);
