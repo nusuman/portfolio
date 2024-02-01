@@ -313,7 +313,7 @@ const data = {
             /* <span class = accent></span> */
             "썸네일 버킷을 클릭 했을 시 나오며 인스타그램의 CARD형식의 디자인을 채택 했습니다. <br /> 디테일 버킷에서는 <span class = accent>댓글을 확인 밑 작성</span> 할 수 있으며 <span class = accent>댓글 삭제</span> 또한 할 수 있습니다. 그리고 <span class = accent>홈 화면 한정</span>으로 <span class = accent>버킷 수정/달성/삭제</span>도 할 수 있습니다. <br/ ><span class = accent>좋아요/스크랩/댓글작성</span> 등 이용자들이 컨텐츠를 자유롭게 상호 작용 할 수 있도록 꾸며 봤습니다.",
           ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_search_video.mp4"],
+          videoSrc: ["./videos/picket/detail_bucket.mp4"],
           codeInfo: [
             {
               codeName: "useBucketOpitons.JS",

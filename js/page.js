@@ -433,6 +433,7 @@ function strMaker(nowObjectArr, nowBool = false) {
 }
 
 function videoMaxViewControls(el) {
+  //fullscreenchange => 전체로 켜졌을때 이후 전체켜진상태에서 꺼졌을떄
   const ev = () => {
     //console.log(el);
     classDelete(el, "video_thumnail");
