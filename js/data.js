@@ -206,7 +206,7 @@ const data = {
           people: [
             "기획: 6인, 제작: <span class = accent>BE(1인)</span>, <span class = accent>FE(2인 -> 1인)</span>",
           ],
-          videoSrc: ["./images/calhartt_react_thumnail.jpg"],
+          videoSrc: ["./videos/picket/total_videos.mp4"],
         },
         {
           type: "HOME",
