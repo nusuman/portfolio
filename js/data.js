@@ -639,7 +639,7 @@ const data = {
           blank: true,
         },
         {
-          url: "https://github.com/neptune588/Picket-FE",
+          url: "https://github.com/neptune588/Picket-FE-Deploy",
           ment: "GITHUB/README",
           className: "read_me_btn",
           blank: true,
