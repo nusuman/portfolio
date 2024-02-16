@@ -75,7 +75,6 @@ h2 {
 /****************************** intro_page *****************************/
 .section_wrpper_design {
   width: 100%;
-  height: 500%;
   overflow: hidden;
   /****************************** profile_page *****************************/
   /****************************** skill_page *****************************/
@@ -161,6 +160,7 @@ h2 {
 .section_wrpper_design .intro_page_design .intro_bg {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   animation: intro_ani_bgi 2s both;
 }
@@ -253,6 +253,10 @@ h2 {
 .section_wrpper_design .profile_page_design .profile_container .profile_box .profile_right .info_area p:last-child {
   margin-bottom: 0;
 }
+.section_wrpper_design .profile_page_design .section_bg > img {
+  width: 100% !important;
+  height: 100vh !important;
+}
 .section_wrpper_design .skill_page_design {
   background-color: #885866 !important;
 }
@@ -330,6 +334,10 @@ h2 {
 .section_wrpper_design .skill_page_design .skill_container .tip_ment {
   margin-top: 15px;
   font-size: 2.4rem;
+}
+.section_wrpper_design .skill_page_design .skill_container .section_bg > img {
+  width: 100% !important;
+  height: 100vh !important;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design {
   display: flex;
@@ -490,7 +498,12 @@ h2 {
   border-bottom: 1px solid white;
 }
 .section_wrpper_design .project_page_design .section_bg {
+  height: 100vh;
   transform: rotate(180deg);
+}
+.section_wrpper_design .project_page_design .section_bg > img {
+  width: 100%;
+  height: 100%;
 }
 .section_wrpper_design .contact_page_design .contact_container .contact_box {
   display: flex;
@@ -609,7 +622,7 @@ h2 {
 .section_wrpper_design .page {
   position: relative;
   display: flex;
-  overflow: hidden;
+  overflow: hidden !important;
   justify-content: center;
   align-items: center;
   font-family: "DungGeunMo";

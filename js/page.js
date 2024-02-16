@@ -447,7 +447,7 @@ function videoMaxViewControls(el) {
   document.addEventListener("fullscreenchange", ev);
 }
 /********************** modai_ev ******************/
-const sectionWrapper = document.getElementById("section_wrapper");
+const sectionWrapper = document.getElementById("fullpage");
 const pagseWithOnlyCalc = document.querySelectorAll(".page");
 const navigatorWithOnlyCalc = document.querySelectorAll("#navgation_area > li");
 
@@ -560,7 +560,7 @@ let dotRepeat = setInterval(() => {
 function pageScrollEvent() {
   $(function () {
     if (aniComplete) {
-      $("#section_wrapper").removeClass("container_overflow");
+      $("#fullpage").removeClass("container_overflow");
       $("#header_ex").addClass("block_on");
       $("#progress_bar").addClass("block_on");
 
@@ -570,7 +570,7 @@ function pageScrollEvent() {
   });
 }
 
-const pages = $("#section_wrapper .page");
+const pages = $("#fullpage .page");
 const navigator = $("#navgation_area > li");
 
 let profileMentAni = false;
@@ -607,12 +607,14 @@ function wheelEvent() {
         navigator.eq(nowIndex - 1).addClass("tab_active");
 
         prev = $(this).prev().offset().top;
-        $("html, body").stop().animate(
-          {
-            scrollTop: prev,
-          },
-          500
-        );
+        $("html, body")
+          .stop()
+          .animate(
+            {
+              scrollTop: prev + "px",
+            },
+            500
+          );
       } else if (delta > 0 && nowIndex < pageLength - 1) {
         navigator.removeClass("tab_active");
         navigator.eq(nowIndex + 1).addClass("tab_active");
@@ -622,12 +624,14 @@ function wheelEvent() {
         });
 
         next = $(this).next().offset().top;
-        $("html, body").stop().animate(
-          {
-            scrollTop: next,
-          },
-          500
-        );
+        $("html, body")
+          .stop()
+          .animate(
+            {
+              scrollTop: next + "px",
+            },
+            500
+          );
       }
     });
   }, 100);

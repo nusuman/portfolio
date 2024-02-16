@@ -18,7 +18,6 @@
 /****************************** intro_page *****************************/
 .section_wrpper_design {
   width: 100%;
-  height: 500%;
   overflow: hidden;
   .section_container {
     position: relative;
@@ -82,6 +81,7 @@
     .intro_bg {
       position: absolute;
       top: 0;
+      left: 0;
       width: 100%;
       animation: intro_ani_bgi 2s both;
     }
@@ -181,6 +181,12 @@
         }
       }
     }
+    .section_bg {
+      > img {
+        width: 100% !important;
+        height: 100vh !important;
+      }
+    }
   }
 
   /****************************** skill_page *****************************/
@@ -259,6 +265,12 @@
       .tip_ment {
         margin-top: 15px;
         font-size: 2.4rem;
+      }
+      .section_bg {
+        > img {
+          width: 100% !important;
+          height: 100vh !important;
+        }
       }
     }
   }
@@ -423,7 +435,12 @@
       }
     }
     .section_bg {
+      height: 100vh;
       transform: rotate(180deg);
+      > img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -546,7 +563,7 @@
   .page {
     position: relative;
     display: flex;
-    overflow: hidden;
+    overflow: hidden !important;
     justify-content: center;
     align-items: center;
     font-family: $dot_font_dungGeunMo;
