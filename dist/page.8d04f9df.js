@@ -11681,7 +11681,7 @@ var data = exports.data = {
       className: "site_view_btn",
       blank: true
     }, {
-      url: "https://github.com/neptune588/Picket-FE",
+      url: "https://github.com/neptune588/Picket-FE-Deploy",
       ment: "GITHUB/README",
       className: "read_me_btn",
       blank: true
@@ -12777,7 +12777,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57612" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63043" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
