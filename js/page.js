@@ -1,6 +1,3 @@
-import $ from "jquery";
-import "jquery-mousewheel";
-
 import { data } from "./data.js";
 
 /************** all ***************/
@@ -557,6 +554,7 @@ let dotRepeat = setInterval(() => {
 }, 700);
 
 /************** jquery ***************/
+let prevLoaction = 0;
 function pageScrollEvent() {
   $(function () {
     if (aniComplete) {
@@ -564,6 +562,10 @@ function pageScrollEvent() {
       $("#header_ex").addClass("block_on");
       $("#progress_bar").addClass("block_on");
 
+      //풀페이지 스크롤 이후 스크롤되는 현상 막기
+      $(window).on("scroll", () => {
+        $(window).scrollTop(prevLoaction);
+      });
       wheelEvent();
       navigatorEvent();
     }
@@ -574,15 +576,13 @@ const pages = $("#fullpage .page");
 const navigator = $("#navgation_area > li");
 
 let profileMentAni = false;
+let scrollEv;
+
 function wheelEvent() {
-  let scrollEv;
-
   clearTimeout(scrollEv);
-
   scrollEv = setTimeout(() => {
-    pages.on("wheel", function (e) {
-      let delta = e.originalEvent.deltaY;
-      //console.log(e.originalEvent.deltaY);
+    pages.on("mousewheel", function (e) {
+      const delta = e.deltaY;
 
       let nowIndex = $(this).index();
       const pageLength = pages.length;
@@ -592,13 +592,13 @@ function wheelEvent() {
 
       //인덱스2에서 위로 스크롤했을때 || 인덱스0애서 아래로 스크롤했을때
       const condition =
-        (delta < 0 && nowIndex === 2) || (delta > 0 && nowIndex === 0);
+        (delta < 0 && nowIndex === 0) || (delta > 0 && nowIndex === 2);
 
       if (condition && !profileMentAni) {
         profileMentShow();
       }
 
-      if (delta < 0 && nowIndex > 0) {
+      if (delta > 0 && nowIndex > 0) {
         $("#progress_bar .gage").css({
           width: (nowIndex - 1) * 25 + "%",
         });
@@ -607,6 +607,7 @@ function wheelEvent() {
         navigator.eq(nowIndex - 1).addClass("tab_active");
 
         prev = $(this).prev().offset().top;
+        prevLoaction = prev;
         $("html, body")
           .stop()
           .animate(
@@ -615,7 +616,7 @@ function wheelEvent() {
             },
             500
           );
-      } else if (delta > 0 && nowIndex < pageLength - 1) {
+      } else if (delta < 0 && nowIndex < pageLength - 1) {
         navigator.removeClass("tab_active");
         navigator.eq(nowIndex + 1).addClass("tab_active");
 
@@ -624,6 +625,7 @@ function wheelEvent() {
         });
 
         next = $(this).next().offset().top;
+        prevLoaction = next;
         $("html, body")
           .stop()
           .animate(
