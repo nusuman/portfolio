@@ -160,7 +160,7 @@ const data = {
   //탭 메뉴를 클릭할시 해당 밸류값을 받아와서 객체 타입과 일치하는지 판단 -> 리스트를 뽑아내자.
   page: [
     {
-      projectName: "PICKET",
+      projectName: "PICKET(BE 배포중단)",
       menuKind: [
         "ALL",
         "HOME",

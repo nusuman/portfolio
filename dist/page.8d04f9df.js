@@ -227,7 +227,7 @@ var data = exports.data = {
   //탭 메뉴는 배열 렝쓰에 맞게 생성이 되게 구현하자.
   //탭 메뉴를 클릭할시 해당 밸류값을 받아와서 객체 타입과 일치하는지 판단 -> 리스트를 뽑아내자.
   page: [{
-    projectName: "PICKET",
+    projectName: "PICKET(BE 배포중단)",
     menuKind: ["ALL", "HOME", "BROWSE", "PROFILE", "BUCKET DETAIL", "ADDBUCKET", "SIGN IN", "SIGN UP", "PWRESEARCH", "SEARCH"],
     etcKind: ["COMMON COMPONENTS", "THEME", "COMMON HOOKS", "STORE", "SLICES", "ROUTER", "UTILS"],
     hoverColor: ["FFBF00"],
@@ -1334,7 +1334,7 @@ function projectListCreate() {
 function thumnailVideoCreate(parentIndex, myIndex) {
   var content = "";
   var myObject = page[parentIndex];
-  if (myObject.projectName !== "PICKET" && myIndex === 0) {
+  if (myObject.projectName !== "PICKET(BE 배포중단)" && myIndex === 0) {
     content = "\n            <img src=\"".concat(myObject.pageInfo[myIndex].thunmnailSrc, "\" />\n        ");
   } else {
     content = "\n            <video class=video_thumnail controls>\n                <source src=\"".concat(myObject.pageInfo[myIndex].videoSrc, "\" type=\"video/mp4\" />\n            </video>\n        ");
@@ -1367,8 +1367,10 @@ function infoTextCreate(objectIndex) {
   var menuIndex = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
   var myObject = page[objectIndex];
   var innerList = "";
-  if (menuIndex === 0) {
-    innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, "</h2>\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uAE30\uAC04</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makePeriod, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC0AC\uC6A9\uAE30\uC220</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makeSkill, "</p>\n\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uC778\uC6D0</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].people, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC81C\uC791\uD658\uACBD</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].setting, "</p>\n        ");
+  if (menuIndex === 0 && myObject.projectName.includes("PICKET")) {
+    innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, "</h2>\n            <h2 class=\"project_sub_title\">\uBC30\uD3EC\uD604\uD669</h2>\n            <p class=\"project_ment\"><span class=\"accent\">AWS\uAE08\uC561 \uC774\uC288</span>\uB85C \uC778\uD574 BE\uBC30\uD3EC \uC911\uB2E8\uB418\uC5C8\uC2B5\uB2C8\uB2E4.<br/> \uC815\uB9D0 \uC8C4\uC1A1\uD558\uC9C0\uB9CC <span class=\"accent\">\uB3D9\uC601\uC0C1</span>\uC73C\uB85C \uBD10\uC8FC\uC2DC\uBA74 \uAC10\uC0AC\uD558\uACA0\uC2B5\uB2C8\uB2E4.</p>\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uAE30\uAC04</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makePeriod, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC0AC\uC6A9\uAE30\uC220</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makeSkill, "</p>\n\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uC778\uC6D0</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].people, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC81C\uC791\uD658\uACBD</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].setting, "</p>\n        ");
+  } else if (menuIndex === 0) {
+    innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, "</h2>\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uAE30\uAC04</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makePeriod, "</p>\n\n            <h2 class=\"project_sub_title\">\uC0AC\uC6A9\uAE30\uC220</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makeSkill, "</p>\n\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uC778\uC6D0</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].people, "</p>\n\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uD658\uACBD</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].setting, "</p>\n        ");
   } else {
     innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, ": ").concat(myObject.pageInfo[menuIndex].type, "</h2>\n    \n            <h2 class=\"project_sub_title\">\uC8FC\uC694\uAE30\uB2A5</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[menuIndex].pageContents, "</p>\n    \n            <h2 class=\"project_sub_title\">EPISODE</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[menuIndex].episode, "</p>\n        \n        ");
   }
@@ -1492,6 +1494,8 @@ function pageScrollEvent() {
       $("#fullpage").removeClass("container_overflow");
       $("#header_ex").addClass("block_on");
       $("#progress_bar").addClass("block_on");
+
+      //풀페이지 스크롤 이후 스크롤되는 현상 막기
       $(window).on("scroll", function () {
         $(window).scrollTop(prevLoaction);
       });
@@ -1569,7 +1573,7 @@ function navigatorEvent() {
     $("html, body").stop().animate({
       scrollTop: currentOffset
     }, 500);
-
+    prevLoaction = currentOffset;
     //prev가 current보다 크면 올라간거고 낮으면 내려간거
     prevOffset = currentOffset;
   });
@@ -1657,7 +1661,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62718" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59156" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

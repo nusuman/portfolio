@@ -329,7 +329,7 @@ function thumnailVideoCreate(parentIndex, myIndex) {
 
   let myObject = page[parentIndex];
 
-  if (myObject.projectName !== "PICKET" && myIndex === 0) {
+  if (myObject.projectName !== "PICKET(BE 배포중단)" && myIndex === 0) {
     content = `
             <img src="${myObject.pageInfo[myIndex].thunmnailSrc}" />
         `;
@@ -384,9 +384,11 @@ function infoTextCreate(objectIndex, menuIndex = 0) {
 
   let innerList = ``;
 
-  if (menuIndex === 0) {
+  if (menuIndex === 0 && myObject.projectName.includes("PICKET")) {
     innerList = `
             <h2 class="project_name">${myObject.projectName}</h2>
+            <h2 class="project_sub_title">배포현황</h2>
+            <p class="project_ment"><span class="accent">AWS금액 이슈</span>로 인해 BE배포 중단되었습니다.<br/> 정말 죄송하지만 <span class="accent">동영상</span>으로 봐주시면 감사하겠습니다.</p>
             <h2 class="project_sub_title">제작기간</h2>
             <p class="project_ment">${myObject.pageInfo[0].makePeriod}</p>
     
@@ -396,6 +398,21 @@ function infoTextCreate(objectIndex, menuIndex = 0) {
             <h2 class="project_sub_title">제작인원</h2>
             <p class="project_ment">${myObject.pageInfo[0].people}</p>
     
+            <h2 class="project_sub_title">제작환경</h2>
+            <p class="project_ment">${myObject.pageInfo[0].setting}</p>
+        `;
+  } else if (menuIndex === 0) {
+    innerList = `
+            <h2 class="project_name">${myObject.projectName}</h2>
+            <h2 class="project_sub_title">제작기간</h2>
+            <p class="project_ment">${myObject.pageInfo[0].makePeriod}</p>
+
+            <h2 class="project_sub_title">사용기술</h2>
+            <p class="project_ment">${myObject.pageInfo[0].makeSkill}</p>
+
+            <h2 class="project_sub_title">제작인원</h2>
+            <p class="project_ment">${myObject.pageInfo[0].people}</p>
+
             <h2 class="project_sub_title">제작환경</h2>
             <p class="project_ment">${myObject.pageInfo[0].setting}</p>
         `;
@@ -677,6 +694,7 @@ function navigatorEvent() {
       500
     );
 
+    prevLoaction = currentOffset;
     //prev가 current보다 크면 올라간거고 낮으면 내려간거
     prevOffset = currentOffset;
   });
