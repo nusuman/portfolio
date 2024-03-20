@@ -1121,19 +1121,14 @@ var data = exports.data = {
       className: "site_view_btn",
       blank: true
     }, {
+      url: "https://github.com/neptune588/calhartt_React_Ver/tree/main/src",
+      ment: "<span class=accent>디렉토리 구조</span>",
+      className: "directory_view_btn",
+      blank: true
+    }, {
       url: "https://github.com/neptune588/calhartt_React_Ver",
       ment: "GITHUB/README",
       className: "read_me_btn",
-      blank: true
-    }, {
-      url: "https://www.figma.com/file/LJuRDXEWygryIhmNkQsmpv/%EC%B9%BC%ED%95%98%ED%8A%B8?type=design&node-id=0-1&mode=design&t=j365Y8F5Z8ShZjeD-0",
-      ment: "기획서 보기",
-      className: "plan_view_btn",
-      blank: true
-    }, {
-      url: "https://miro.com/app/board/uXjVMV6eaxg=/",
-      ment: "브레인 스토밍",
-      className: "blain_stoming",
       blank: true
     }]
   }]
@@ -1666,7 +1661,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57873" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58642" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
