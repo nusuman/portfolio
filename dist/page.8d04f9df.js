@@ -551,13 +551,18 @@ var data = exports.data = {
     }],
     link: [{
       url: "#!",
-      ment: "코드 보기",
+      ment: "<span class=accent>코드 보기</span>",
       className: "code_view_btn",
       blank: false
     }, {
       url: "https://picket-fe-deploy.vercel.app/",
       ment: "사이트 보기",
       className: "site_view_btn",
+      blank: true
+    }, {
+      url: "https://github.com/neptune588/Picket-FE-Deploy/tree/main/src",
+      ment: "<span class=accent>디렉토리 구조</span>",
+      className: "directory_view_btn",
       blank: true
     }, {
       url: "https://github.com/neptune588/Picket-FE-Deploy",
@@ -810,7 +815,7 @@ var data = exports.data = {
     }],
     link: [{
       url: "#!",
-      ment: "코드 보기",
+      ment: "<span class=accent>코드 보기</span>",
       className: "code_view_btn",
       blank: false
     }, {
@@ -895,7 +900,7 @@ var data = exports.data = {
     }],
     link: [{
       url: "#!",
-      ment: "코드 보기",
+      ment: "<span class=accent>코드 보기</span>",
       className: "code_view_btn",
       blank: false
     }, {
@@ -1107,7 +1112,7 @@ var data = exports.data = {
     }],
     link: [{
       url: "#!",
-      ment: "코드 보기",
+      ment: "<span class=accent>코드 보기</span>",
       className: "code_view_btn",
       blank: false
     }, {
@@ -1661,7 +1666,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59156" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57873" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

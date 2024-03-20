@@ -445,6 +445,9 @@ h2 {
 .section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .link_btn_list_design li:last-child {
   border-right: 2px solid white;
 }
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .link_btn_list_design li .accent {
+  color: #ffbf00;
+}
 .section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design {
   width: 120px;
   height: 610px;

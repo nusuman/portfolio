@@ -628,7 +628,7 @@ const data = {
       link: [
         {
           url: "#!",
-          ment: "코드 보기",
+          ment: "<span class=accent>코드 보기</span>",
           className: "code_view_btn",
           blank: false,
         },
@@ -636,6 +636,12 @@ const data = {
           url: "https://picket-fe-deploy.vercel.app/",
           ment: "사이트 보기",
           className: "site_view_btn",
+          blank: true,
+        },
+        {
+          url: "https://github.com/neptune588/Picket-FE-Deploy/tree/main/src",
+          ment: "<span class=accent>디렉토리 구조</span>",
+          className: "directory_view_btn",
           blank: true,
         },
         {
@@ -964,7 +970,7 @@ const data = {
       link: [
         {
           url: "#!",
-          ment: "코드 보기",
+          ment: "<span class=accent>코드 보기</span>",
           className: "code_view_btn",
           blank: false,
         },
@@ -1084,7 +1090,7 @@ const data = {
       link: [
         {
           url: "#!",
-          ment: "코드 보기",
+          ment: "<span class=accent>코드 보기</span>",
           className: "code_view_btn",
           blank: false,
         },
@@ -1378,7 +1384,7 @@ const data = {
       link: [
         {
           url: "#!",
-          ment: "코드 보기",
+          ment: "<span class=accent>코드 보기</span>",
           className: "code_view_btn",
           blank: false,
         },
