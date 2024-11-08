@@ -227,6 +227,414 @@ var data = exports.data = {
   //탭 메뉴는 배열 렝쓰에 맞게 생성이 되게 구현하자.
   //탭 메뉴를 클릭할시 해당 밸류값을 받아와서 객체 타입과 일치하는지 판단 -> 리스트를 뽑아내자.
   page: [{
+    projectName: "중간이들(중앙대 간호학과 커뮤니티)",
+    menuKind: ["All", "Community", "Post Create/Put", "Post Detail", "Post Search", "Admin/Sign In", "Admin/Report History", "Admin/Member Management", "Admin/User Approval", "Admin/Posts&Comments Management"],
+    etcKind: ["Apis", "Layouts", "Common Components", "Common Styles", "Theme", "Custom Hooks", "Store", "Slices", "Router", "Utils"],
+    hoverColor: ["FFBF00"],
+    iconSrc: ["./images/picket.png"],
+    iframeStyle: ["width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;"],
+    sandBoxValue: ["allow-scripts allow-same-origin"],
+    pageInfo: [{
+      type: "All",
+      makePeriod: "2024-08-19 ~ 2024-10-30",
+      makeSkill: ["<span class=accent>React</span>", "<span class=accent>Vite</span>", "<span class=accent>Axios</span>", "<span class=accent>Styled-Components</span>", "<span class=accent>React-Router-Dom</span>", "<span class=accent>React-Hook-Form</span>", "<span class=accent>Redux-Tool-Kit</span>"],
+      setting: ["React-Vite"],
+      people: ["기획: 2인, 제작: <span class = accent>BE(1인)</span>, <span class = accent>FE(2인)</span>"],
+      videoSrc: ["./videos/picket/total_videos.mp4"]
+    }, {
+      type: "Community",
+      pageContents: ["페이지네이션", "페이지 정렬"],
+      episode: ["커뮤니티 페이지에서는 작성된 글 목록을 볼 수 있습니다. <br /><span class = accent>페이지네이션</span>기능을 이용하여 각 페이지를 넘길 수 있고, 정렬 기능을 통하여 각 옵션에 맞게 게시글 목록을 <span class = accent>정렬</span> 할 수 있습니다. <br />게시글 작성 밑 상세 보기는 <span class = accent>정회원 상태 일 때</span> 이용 가능하게 구현 했습니다."],
+      videoSrc: ["./videos/picket/home.mp4"],
+      codeInfo: [{
+        codeName: "Community(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Community",
+        src: ["https://carbon.now.sh/embed/4LqtiPwOal2gDWrnRzMr"]
+      }, {
+        codeName: "Community Post(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Community > Community Post",
+        src: ["https://carbon.now.sh/embed/feShsJDbgjr8eWTuHzeO"]
+      }]
+    }, {
+      type: "Post Create/Put",
+      pageContents: ["파일 업로드/삭제", "이미지 업로드/복사&붙여넣기/삭제", "카카오 API 이용 하여 병원 찾기"],
+      episode: ["게시글 작성/수정 페이지는 TinyMCE Editor를 이용하여 <br /><span class = accent>파일 업로드/입력 문자 갯수 체크/이미지 업로드&복사&붙여넣기/파일 삭제</span> 등 기본적으로 게시글을 작성 밑 수정할 때 필수적이라고 생각 되는 기능은 전부 구현하였습니다. <br/> 또한 <span class = accent>카카오 API</span>를 이용하여 <span class = accent>병원 찾기</span> 밑 <span class = accent>지도 띄우기</span> 기능을 구현하였습니다."],
+      videoSrc: ["./videos/picket/browse.mp4"],
+      codeInfo: [{
+        codeName: "Create Community Post(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Create Commnunity Post",
+        src: ["https://carbon.now.sh/embed/AAJIp1gRosyFnRxPMClc"]
+      }, {
+        codeName: "Post Create Editor(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Create Commnunity Post > Post Create Editor",
+        src: ["https://carbon.now.sh/embed/MXsKwUWI9p2oPDv9Hc6f"]
+      }, {
+        codeName: "Upload File list(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Create Commnunity Post > Post Create Editor > Upload File list",
+        src: ["https://carbon.now.sh/embed/9A6zOd6GYlT0fhunJMWR"]
+      }, {
+        codeName: "Hospital Search Modal(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Create Commnunity Post > Hospital Search Modal",
+        src: ["https://carbon.now.sh/embed/rn4nWO9Fvem8QHCfy3Xb"]
+      }, {
+        codeName: "Kakao Map(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Create Commnunity Post > Hospital Search Modal > Kakao Map",
+        src: ["https://carbon.now.sh/embed/cckEj1YTtmMjB6XmzFlh"]
+      }, {
+        codeName: "Buttons(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Create Commnunity Post > Buttons",
+        src: ["https://carbon.now.sh/embed/c5eeYdPjMqkw7lAZHsPR"]
+      }, {
+        codeName: "Category Select Menus(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Create Commnunity Post > Category Select Menus",
+        src: ["https://carbon.now.sh/embed/SP4VqvwbX5YTCclbUdX1"]
+      }]
+    }, {
+      type: "Post Detail",
+      pageContents: ["게시글 좋아요/스크랩", "게시글 수정/삭제/신고", "댓글 작성/수정/삭제/신고", "현재 클릭한 게시글 표시", "페이지네이션"],
+      episode: ["게시글 상세보기 페이지는 <span class = accent>상단의 카테고리</span> 밑 <span class = accent>하단의 다른 게시글 목록</span> 등을 통해 게시글 탐색을 좀 더 편하게 할 수 있도록 하였습니다.<br /> 또한 <span class = accent>게시글 좋아요/스크랩/삭제/수정/신고</span> 기능, <span class = accent>댓글 작성/수정/삭제/신고 기능, </span> <span class = accent>댓글</span> 밑 <span class = accent>다른 게시글 목록</span> <span class = accent>페이지네이션</span>을 통해 이용자가 불편함 없이 서비스를 이용할 수 있도록 페이지를 구성 하였습니다."],
+      videoSrc: ["./videos/picket/profile.mp4"],
+      codeInfo: [{
+        codeName: "Post Detail(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Post Detail",
+        src: ["https://carbon.now.sh/embed/FbjkZXOqfkZY9WouSL1J"]
+      }, {
+        codeName: "Attachments(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Post Detail > Post Header > Attachments",
+        src: ["https://carbon.now.sh/embed/dUh2Q1YndFBUid4EfldY"]
+      }, {
+        codeName: "Comment Create(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Post Detail > Comment Create",
+        src: ["https://carbon.now.sh/embed/gStCvq705Oozfwmaq0V8"]
+      }, {
+        codeName: "Post Comment Area(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Post Detail > Post Comment Area",
+        src: ["https://carbon.now.sh/embed/TOPNhOftLr9jDMsQUGzn"]
+      }, {
+        codeName: "Post Comment List(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Post Detail > Post Comment Area > Post Comment List",
+        src: ["https://carbon.now.sh/embed/2Yatl7RpE3pgd46aYlmy"]
+      }, {
+        codeName: "Other Posts(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Post Detail > Other Posts",
+        src: ["https://carbon.now.sh/embed/aBbnEJwduxK6RReLENQS"]
+      }, {
+        codeName: "Other Post List(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Post Detail > Other Posts > Other Post List",
+        src: ["https://carbon.now.sh/embed/Yp91jy7VKT2V1BXIyP1J"]
+      }, {
+        codeName: "Modals(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Post Detail > Modals",
+        src: ["https://carbon.now.sh/embed/Z3PwHIaSnawUdCCuEoi9"]
+      }, {
+        codeName: "More Popup(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Post Detail > More Popup",
+        src: ["https://carbon.now.sh/embed/J3z2VW7KUiSw0FALJyMF"]
+      }]
+    }, {
+      type: "Post Search",
+      pageContents: ["게시글 검색", "디바운스 기능", "게시글 분류 기능", "검색 키워드 표시 기능", "페이지네이션"],
+      episode: ["<span class = accent>메인 페이지</span> 밑 상단의 <span class = accent>SEARCH BAR</span>등을 통해 검색을 할 수 있으며, 이용자가 검색한 키워드가 <span class = accent>제목</span>이나 <span class = accent>내용</span>에 포함된 경우, 해당 게시글이 검색 결과에 표시됩니다. <br />왼쪽의 <span class = accent>분류</span> 기능을 통해 각 게시판 종류별로 검색 결과를 볼 수 있으며, <span class = accent>검색 키워드 표시</span> 기능을 통해 한층 더 가독성을 높였습니다."],
+      videoSrc: ["./videos/picket/detail_bucket.mp4"],
+      codeInfo: [{
+        codeName: "Post Search(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Post Search",
+        src: ["https://carbon.now.sh/embed/nUNLBI4e7dMa6aHGj42D"]
+      }]
+    }, {
+      type: "Admin/Sign In",
+      pageContents: ["로그인", "로그인 입력 검증"],
+      episode: ["관리자 페이지를 이용하기 위해서는 반드시 해당 로그인 페이지를 이용하여 로그인을 해야하며 <span class = accent>REACT-HOOK-FORM</span>을 통해 보다 간편하게 입력 검증과 에러 핸들을 하였습니다."],
+      videoSrc: ["./videos/picket/addbucket.mp4"],
+      codeInfo: [{
+        codeName: "Admin Sign In(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Admin > Admin Sign In",
+        src: ["https://carbon.now.sh/embed/4yyKJVLssVpQvKcARXYs"]
+      }]
+    }, {
+      type: "Admin/Report History",
+      pageContents: ["신고된 게시글/댓글 조회 밑 처리, 페이지네이션"],
+      episode: ["해당 페이지에서는 신고된 게시글 밑 댓글들을 처리 할 수 있습니다. <br/>또한 리스트를 클릭하여 신고된 게시물들을 상세 조회 할 수 있습니다. "],
+      videoSrc: ["./videos/picket/sign_in.mp4"],
+      codeInfo: [{
+        codeName: "Report History(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Admin > Report History",
+        src: ["https://carbon.now.sh/embed/cAKtFPp6tdzmQSHAAWry"]
+      }]
+    }, {
+      type: "Admin/Member Management",
+      pageContents: ["회원 정지/탈퇴 기능, 검색 기능, 페이지네이션"],
+      episode: ["회원 관리 페이지에서는 <span class = accent>ID, 닉네임</span> 등의 검색 옵션을 함께 제공하여 보다 회원을 <span class = accent>쉽게</span> 찾을 수 있게 하였으며, <br /><span class = accent>정지</span> 또는 <span class = accent>탈퇴</span>를 클릭 할 시 <span class = accent>모달</span>을 띄워 이용자가 어떠한 사유로 정지/탈퇴를 당하였는지 알 수 있도록 구현 하였습니다."],
+      videoSrc: ["./videos/picket/sign_up.mp4"],
+      codeInfo: [{
+        codeName: "Member Management(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Member Management",
+        src: ["https://carbon.now.sh/embed/l2b4t0dUUbds4AgJG12z"]
+      }]
+    }, {
+      type: "Admin/User Approval",
+      pageContents: ["회원가입 승인/거절 기능, 페이지네이션"],
+      episode: [/* <span class = accent></span> */
+      "회원가입 승인 페이지에서는 회원가입을  <span class = accent>승인/거절</span> 할 수 있으며 거절 시  <span class = accent>기간 선택 밑 사유</span>를 입력하게 하는 등 <br />관리자가 보다 상세하게 거절 할 수 있도록 기능들을 구현 하였습니다."],
+      videoSrc: ["./videos/picket/pwresearch.mp4"],
+      codeInfo: [{
+        codeName: "User Approval(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "User Approval",
+        src: ["https://carbon.now.sh/embed/yiE64XJpnY2rwd4i5pw3"]
+      }]
+    }, {
+      type: "Admin/Posts&Comments Management",
+      pageContents: ["게시글/댓글 삭제 기능", "게시글/댓글 상세 조회", "검색 기능", "페이지네이션"],
+      episode: [/* <span class = accent></span> */
+      "게시글/댓글 관리 페이지에서는 관리 편의를 높이기 위해, 삭제 버튼을 누른 후 <span class = accent>원하는 페이지</span>별로 리스트를 선택하여 삭제할 수 있도록 구성했습니다.<br />예를 들어, <span class = accent>1페이지에서 5, 6, 9번 리스트와 2페이지에서 11, 14, 17번 리스트</span>를 선택하여 <span class = accent>총 6개 항목</span>을 일괄 삭제할 수 있습니다. 또한, 리스트를 클릭하면 해당 <span class = accent>게시글이나 댓글</span>의 상세 정보와 <span class = accent>링크</span>가 제공되어, 쉽게 해당 게시글이나 댓글로 이동할 수 있도록 하여 관리 효율성을 높였습니다."],
+      videoSrc: ["./videos/picket/search.mp4"],
+      codeInfo: [{
+        codeName: "Posts And Comments Management(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Posts And Comments Management",
+        src: ["https://carbon.now.sh/embed/EL34quxy45CZNgVjYPPV"]
+      }]
+    }, {
+      type: "Apis",
+      codeInfo: [{
+        codeName: "Axios Instance.JS",
+        themeColor: "yellow",
+        codeType: "Api > Axios Instance",
+        src: ["https://carbon.now.sh/embed/85kMU1RPHrQHEqNA4dVg"]
+      }, {
+        codeName: "Post Api.JS",
+        themeColor: "yellow",
+        codeType: "Api > Post Api",
+        src: ["https://carbon.now.sh/embed/PmumxQNan1iJ1rOa1XL9"]
+      }, {
+        codeName: "Comment Api.JS",
+        themeColor: "yellow",
+        codeType: "Api > Comment Api",
+        src: ["https://carbon.now.sh/embed/RJSfwp5KZ6C6FzGaztCF"]
+      }, {
+        codeName: "Admin Api.JS",
+        themeColor: "yellow",
+        codeType: "Api > Admin Api",
+        src: ["https://carbon.now.sh/embed/xgzJTUw6J3hZNHSMWb0M"]
+      }, {
+        codeName: "Report Api.JS",
+        themeColor: "yellow",
+        codeType: "Api > Admin Api",
+        src: ["https://carbon.now.sh/embed/x9AIBQOpYCKUFNjXpT6w"]
+      }]
+    }, {
+      type: "Layouts",
+      codeInfo: [{
+        codeName: "Layouts(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Layouts",
+        src: ["https://carbon.now.sh/embed/34kp6LYVBDsdxpT7z5du"]
+      }, {
+        codeName: "Nav Bar(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Layouts > Nav Bar",
+        src: ["https://carbon.now.sh/embed/SyAmVXztaGMXISzEwi8L"]
+      }]
+    }, {
+      type: "Common Components",
+      codeInfo: [{
+        codeName: "Pagination(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Components > Pagination",
+        src: ["https://carbon.now.sh/embed/0D8k0oTVVHuwRnzBRn1a"]
+      }, {
+        codeName: "Page Number(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Components > Pagination > Page Number",
+        src: ["https://carbon.now.sh/embed/3mCc945M9PUUqYvkw0kz"]
+      }, {
+        codeName: "Loading(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Components > Loading",
+        src: ["https://carbon.now.sh/embed/cxs9nJkTSRaLPCu0LDYO"]
+      }, {
+        codeName: "Page Category(INDEX).JSX",
+        themeColor: "orange",
+        codeType: "Components > Page Category",
+        src: ["https://carbon.now.sh/embed/26otfvsoTg3SFtdFR2Na"]
+      }]
+    }, {
+      type: "Common Styles",
+      codeInfo: [{
+        codeName: "Local Text Style.JS",
+        themeColor: "yellow",
+        codeType: "Styles > Common Style > Local Text Style",
+        src: ["https://carbon.now.sh/embed/3JRJ88qsGumlec3KWeom"]
+      }, {
+        codeName: "Text.JS",
+        themeColor: "yellow",
+        codeType: "Styles > Common Style > Text",
+        src: ["https://carbon.now.sh/embed/f7WXqjvh3uodUJjLrIIN"]
+      }, {
+        codeName: "Box.JS",
+        themeColor: "yellow",
+        codeType: "Styles > Common Style > Box",
+        src: ["https://carbon.now.sh/embed/Q6tvWU5yTtmXFSVwhNBm"]
+      }, {
+        codeName: "Etc.JS",
+        themeColor: "yellow",
+        codeType: "Styles > Common Style > Etc",
+        src: ["https://carbon.now.sh/embed/2aFdLxFHOg00mhhvhRra"]
+      }]
+    }, {
+      type: "Theme",
+      codeInfo: [{
+        codeName: "Theme.JS",
+        themeColor: "yellow",
+        codeType: "Styles > Theme",
+        src: ["https://carbon.now.sh/embed/5LKqWRVQqYoYpG9crphU"]
+      }, {
+        codeName: "Typography.JS",
+        themeColor: "yellow",
+        codeType: "Styles > Typography",
+        src: ["https://carbon.now.sh/embed/4gLiIL6M6hl4aUxJH24x"]
+      }, {
+        codeName: "Colors.JS",
+        themeColor: "yellow",
+        codeType: "Styles > Colors",
+        src: ["https://carbon.now.sh/embed/pKfdxAb1zCxa2ldsHuTv"]
+      }, {
+        codeName: "GlobalStyle.JS",
+        themeColor: "yellow",
+        codeType: "Styles > GlobalStyle",
+        src: ["https://carbon.now.sh/embed/RIH5U9BZB2rk3RL1zSKd"]
+      }]
+    }, {
+      type: "Custom Hooks",
+      codeInfo: [{
+        codeName: "useFetchAndPaginate.JS",
+        themeColor: "yellow",
+        codeType: "Hooks > useFetchAndPaginate",
+        src: ["https://carbon.now.sh/embed/pimzEOx8NEqIVf9GovsK"]
+      }, {
+        codeName: "useTinyMceUpload.JS",
+        themeColor: "yellow",
+        codeType: "Hooks > useTinyMceUpload",
+        src: ["https://carbon.now.sh/embed/p21RFiBTw03YJktE7EF0"]
+      }, {
+        codeName: "useModalsControl.JS",
+        themeColor: "yellow",
+        codeType: "Hooks > useModalsControl",
+        src: ["https://carbon.now.sh/embed/f9EQ2GPgmVPuGcPlB4W0"]
+      }, {
+        codeName: "usePostSearch.JS",
+        themeColor: "yellow",
+        codeType: "Hooks > usePostSearch",
+        src: ["https://carbon.now.sh/embed/UjS9pA3XhNGVRM9vRGxt"]
+      }, {
+        codeName: "useSelectorList.JS",
+        themeColor: "yellow",
+        codeType: "Hooks > useSelectorList",
+        src: ["https://carbon.now.sh/embed/h2OFzgPdOSLZR9f8WiWq"]
+      }]
+    }, {
+      type: "Store",
+      codeInfo: [{
+        codeName: "Store.JS",
+        themeColor: "yellow",
+        codeType: "Store > Store",
+        src: ["https://carbon.now.sh/embed/uVinTpd7rrG2pio5mF6P"]
+      }]
+    }, {
+      type: "Slices",
+      codeInfo: [{
+        codeName: "Modals Control.JS",
+        themeColor: "yellow",
+        codeType: "Store > Modals Control",
+        src: ["https://carbon.now.sh/embed/nKeQHl4FKS9w4SsY3JUr"]
+      }, {
+        codeName: "Nav Bar Options.JS",
+        themeColor: "yellow",
+        codeType: "Store > Nav Bar Options",
+        src: ["https://carbon.now.sh/embed/rwmA2OVsn0CRwp9ZJZMc"]
+      }, {
+        codeName: "Locations.JS",
+        themeColor: "yellow",
+        codeType: "store > Locations",
+        src: ["https://carbon.now.sh/embed/NL1d28ZeswAmuncS4BCq"]
+      }]
+    }, {
+      type: "Router",
+      codeInfo: [{
+        codeName: "Router.JSX",
+        themeColor: "greenyellow",
+        codeType: "Routes > Router",
+        src: ["https://carbon.now.sh/embed/fcg6qw6ufZNMJUxc94cm"]
+      }]
+    }, {
+      type: "Utils",
+      codeInfo: [{
+        codeName: "Sweet Alert(INDEX).JS",
+        themeColor: "yellow",
+        codeType: "Utils > Sweet Alert",
+        src: ["https://carbon.now.sh/embed/c5iTWUcnY0Vm7Q74V69D"]
+      }, {
+        codeName: "Date Formatting(INDEX).JS",
+        themeColor: "yellow",
+        codeType: "Utils > Date Formatting",
+        src: ["https://carbon.now.sh/embed/TRx2XPv1grKP9mifmp5f"]
+      }, {
+        codeName: "White Space Check(INDEX).JS",
+        themeColor: "yellow",
+        codeType: "Utils > White Space Check",
+        src: ["https://carbon.now.sh/embed/82IbO767uXKhziwGBSjK"]
+      }]
+    }],
+    link: [{
+      url: "#!",
+      ment: "<span class=accent>코드 보기</span>",
+      className: "code_view_btn",
+      blank: false
+    }, {
+      url: "https://www.caugannies.com/",
+      ment: "사이트 보기",
+      className: "site_view_btn",
+      blank: true
+    }, {
+      url: "https://github.com/Gannies/Gannies_FrontEnd/tree/dev/src",
+      ment: "<span class=accent>디렉토리 구조</span>",
+      className: "directory_view_btn",
+      blank: true
+    }, {
+      url: "https://github.com/neptune588/Gannies_FrontEnd",
+      ment: "GITHUB",
+      className: "read_me_btn",
+      blank: true
+    }, {
+      url: "https://github.com/Gannies",
+      ment: "GITHUB/TEAM",
+      className: "read_me_btn",
+      blank: true
+    }]
+  }, {
     projectName: "PICKET(BE 배포중단)",
     menuKind: ["ALL", "HOME", "BROWSE", "PROFILE", "BUCKET DETAIL", "ADDBUCKET", "SIGN IN", "SIGN UP", "PWRESEARCH", "SEARCH"],
     etcKind: ["COMMON COMPONENTS", "THEME", "COMMON HOOKS", "STORE", "SLICES", "ROUTER", "UTILS"],
@@ -1246,8 +1654,18 @@ totalCreate();
 function totalCreate() {
   var projectBox = document.getElementById("project_box");
   var list = "";
-  list = "\n        <div class=\"video_container\">\n            <ul id=\"page_list_area\" class=\"page_list_area_design\">\n                ".concat(tabListCreate(0), "\n            </ul>\n            <div class=\"thumnail_n_video_box\">\n                ").concat(thumnailVideoCreate(0, 0), "\n            </div>\n        </div>\n\n        <div class=\"proeject_info_area info_area\">\n            <div id=\"info_text_area\" class=\"info_text_area_design\">\n                ").concat(infoTextCreate(0, 0), "\n            </div>\n            <ul id=\"link_btn_list\" class=\"link_btn_list_design\">\n                ").concat(linkBtnCreate(0), "\n            </ul>\n        </div>\n\n        <ul id=\"project_list_area\" class=\"project_list_design\">\n            ").concat(projectListCreate(), "\n        </ul>\n    ");
+  list = "\n        <div class=\"video_container\">\n            <ul id=\"page_list_area\" class=\"page_list_area_design\">\n                ".concat(tabListCreate(0), "\n            </ul>\n            <div class=\"thumnail_n_video_box\">\n                ").concat(thumnailVideoCreate(0, 0), "\n            </div>\n        </div>\n\n        <div class=\"proeject_info_area info_area\">\n            <div id=\"info_text_area\" class=\"info_text_area_design\">\n                ").concat(infoTextCreate(0, 0), "\n            </div>\n            <ul id=\"link_btn_list\" class=\"link_btn_list_design\">\n                ").concat(linkBtnCreate(0), "\n            </ul>\n        </div>\n\n        <div class=\"swiper_container\">\n        <button type=\"button\" class=\"project_list_move_button prev_move_button \">\n          <i class=\"fas fa-chevron-up\"></i>\n          <span class=\"swiper-button-prev inner_button\"></span>\n        </button>\n          <div class=\"swiper\">\n            <ul id=\"project_list_area\" class=\"project_list_design swiper-wrapper\">\n                ").concat(projectListCreate(), "\n            </ul>\n          </div>\n        <button type=\"button\" class=\"project_list_move_button next_move_button \">\n          <i class=\"fas fa-chevron-down\"></i>\n          <span class=\"swiper-button-next inner_button\"></span>\n        </button>\n    ");
   projectBox.innerHTML = list;
+  new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: 4,
+    direction: "vertical",
+    slidesPerGroup: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
   totalClickEvent();
 }
 function totalClickEvent() {
@@ -1256,6 +1674,14 @@ function totalClickEvent() {
   var pageListArea = document.getElementById("page_list_area");
   var thumNVideoBox = document.querySelector(".thumnail_n_video_box");
   var linkBtnArea = document.getElementById("link_btn_list");
+
+  //swiper button
+  var swiperOuterButton = document.querySelectorAll(".project_list_move_button");
+  swiperOuterButton.forEach(function (swiperButton) {
+    swiperButton.addEventListener("click", function () {
+      swiperButton.querySelector(".inner_button").click();
+    });
+  });
   var list01 = "";
   var list02 = "";
   projectList.forEach(function (li, index) {
@@ -1326,7 +1752,7 @@ function projectListCreate() {
   var innerList = "";
   var receive = "";
   page.forEach(function (object, index) {
-    innerList = "\n            <li class=\"".concat(index === 0 ? "project_list project_on" : "project_list", "\">\n                <div class=\"icon_img\">\n                    <img src=").concat(object.iconSrc, " alt=\"").concat(object.projectName, "_icon\"/>\n                </div>\n                <p class=\"icon_name\">").concat(object.projectName, "</p>\n            </li>\n        ");
+    innerList = "\n            <li class=\"".concat(index === 0 ? "project_list swiper-slide project_on" : "project_list swiper-slide", "\">\n                <div class=\"icon_img\">\n                    <img src=").concat(object.iconSrc, " alt=\"").concat(object.projectName, "_icon\"/>\n                </div>\n                <p class=\"icon_name\">").concat(object.projectName, "</p>\n            </li>\n        ");
     receive += innerList;
   });
   return receive;
@@ -1334,7 +1760,8 @@ function projectListCreate() {
 function thumnailVideoCreate(parentIndex, myIndex) {
   var content = "";
   var myObject = page[parentIndex];
-  if (myObject.projectName !== "PICKET(BE 배포중단)" && myIndex === 0) {
+  var condition = myObject.projectName !== "PICKET(BE 배포중단)" && myObject.projectName !== "중간이들(중앙대 간호학과 커뮤니티)" && myIndex === 0;
+  if (condition) {
     content = "\n            <img src=\"".concat(myObject.pageInfo[myIndex].thunmnailSrc, "\" />\n        ");
   } else {
     content = "\n            <video class=video_thumnail controls>\n                <source src=\"".concat(myObject.pageInfo[myIndex].videoSrc, "\" type=\"video/mp4\" />\n            </video>\n        ");
@@ -1367,7 +1794,9 @@ function infoTextCreate(objectIndex) {
   var menuIndex = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
   var myObject = page[objectIndex];
   var innerList = "";
-  if (menuIndex === 0 && myObject.projectName.includes("PICKET")) {
+  if (menuIndex === 0 && myObject.projectName.includes("중간이들")) {
+    innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, "</h2>\n            <h2 class=\"project_sub_title\">\uC8FC\uC694 \uD2B9\uC9D5</h2>\n            <p class=\"project_ment\"><span class=\"accent\">\uB514\uB809\uD1A0\uB9AC \uAD6C\uC870\uD654</span> \uBC11 \uAE30\uB2A5\uBCC4\uB85C <span class=\"accent\">API \uD568\uC218</span>\uB97C <span class=\"accent\">\uBD84\uB9AC</span>\uD558\uC5EC <span class=\"accent\">\uC7AC\uC0AC\uC6A9\uC131</span>\uACFC <span class=\"accent\">\uD6A8\uC728\uC131</span>\uC744 \uB192\uC600\uC73C\uBA70, \uC2A4\uD0C0\uC77C\uB4DC \uCEF4\uD3EC\uB10C\uD2B8\uB85C <span class=\"accent\">\uACF5\uD1B5 \uC2A4\uD0C0\uC77C</span>\uC744 \uC815\uC758\uD558\uC5EC <span class=\"accent\">\uC77C\uAD00\uB41C \uB514\uC790\uC778 \uC2DC\uC2A4\uD15C</span>\uC744 \uC720\uC9C0\uD588\uC2B5\uB2C8\uB2E4.</p>\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uAE30\uAC04</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makePeriod, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC0AC\uC6A9\uAE30\uC220</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makeSkill, "</p>\n\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uC778\uC6D0</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].people, "</p>\n        ");
+  } else if (menuIndex === 0 && myObject.projectName.includes("PICKET")) {
     innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, "</h2>\n            <h2 class=\"project_sub_title\">\uBC30\uD3EC\uD604\uD669</h2>\n            <p class=\"project_ment\"><span class=\"accent\">AWS\uAE08\uC561 \uC774\uC288</span>\uB85C \uC778\uD574 BE\uBC30\uD3EC \uC911\uB2E8\uB418\uC5C8\uC2B5\uB2C8\uB2E4.<br/> \uC815\uB9D0 \uC8C4\uC1A1\uD558\uC9C0\uB9CC <span class=\"accent\">\uB3D9\uC601\uC0C1</span>\uC73C\uB85C \uBD10\uC8FC\uC2DC\uBA74 \uAC10\uC0AC\uD558\uACA0\uC2B5\uB2C8\uB2E4.</p>\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uAE30\uAC04</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makePeriod, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC0AC\uC6A9\uAE30\uC220</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makeSkill, "</p>\n\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uC778\uC6D0</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].people, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC81C\uC791\uD658\uACBD</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].setting, "</p>\n        ");
   } else if (menuIndex === 0) {
     innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, "</h2>\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uAE30\uAC04</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makePeriod, "</p>\n\n            <h2 class=\"project_sub_title\">\uC0AC\uC6A9\uAE30\uC220</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makeSkill, "</p>\n\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uC778\uC6D0</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].people, "</p>\n\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uD658\uACBD</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].setting, "</p>\n        ");
@@ -1390,16 +1819,17 @@ function strMaker(nowObjectArr) {
 }
 function videoMaxViewControls(el) {
   //fullscreenchange => 전체로 켜졌을때 이후 전체켜진상태에서 꺼졌을떄
-  var ev = function ev() {
+  var _ev = function ev() {
     //console.log(el);
     classDelete(el, "video_thumnail");
     if (!document.fullscreenElement) {
       classPlus(el, "video_thumnail");
-      document.removeEventListener("fullscreenchange", ev);
+      document.removeEventListener("fullscreenchange", _ev);
     }
   };
-  document.addEventListener("fullscreenchange", ev);
+  document.addEventListener("fullscreenchange", _ev);
 }
+
 /********************** modai_ev ******************/
 var sectionWrapper = document.getElementById("fullpage");
 var pagseWithOnlyCalc = document.querySelectorAll(".page");
@@ -1661,7 +2091,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58642" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54333" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

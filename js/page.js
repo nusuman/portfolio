@@ -161,6 +161,7 @@ const etcCodeList = document.getElementById("etc_code_list");
 const codeViewBox = document.getElementById("code_view");
 
 totalCreate();
+
 function totalCreate() {
   const projectBox = document.getElementById("project_box");
 
@@ -185,12 +186,33 @@ function totalCreate() {
             </ul>
         </div>
 
-        <ul id="project_list_area" class="project_list_design">
-            ${projectListCreate()}
-        </ul>
+        <div class="swiper_container">
+        <button type="button" class="project_list_move_button prev_move_button ">
+          <i class="fas fa-chevron-up"></i>
+          <span class="swiper-button-prev inner_button"></span>
+        </button>
+          <div class="swiper">
+            <ul id="project_list_area" class="project_list_design swiper-wrapper">
+                ${projectListCreate()}
+            </ul>
+          </div>
+        <button type="button" class="project_list_move_button next_move_button ">
+          <i class="fas fa-chevron-down"></i>
+          <span class="swiper-button-next inner_button"></span>
+        </button>
     `;
 
   projectBox.innerHTML = list;
+  new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: 4,
+    direction: "vertical",
+    slidesPerGroup: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
   totalClickEvent();
 }
@@ -205,6 +227,17 @@ function totalClickEvent() {
   const thumNVideoBox = document.querySelector(".thumnail_n_video_box");
 
   const linkBtnArea = document.getElementById("link_btn_list");
+
+  //swiper button
+  const swiperOuterButton = document.querySelectorAll(
+    ".project_list_move_button"
+  );
+
+  swiperOuterButton.forEach((swiperButton) => {
+    swiperButton.addEventListener("click", () => {
+      swiperButton.querySelector(".inner_button").click();
+    });
+  });
 
   let list01 = ``;
   let list02 = ``;
@@ -307,7 +340,9 @@ function projectListCreate() {
   page.forEach((object, index) => {
     innerList = `
             <li class="${
-              index === 0 ? "project_list project_on" : "project_list"
+              index === 0
+                ? "project_list swiper-slide project_on"
+                : "project_list swiper-slide"
             }">
                 <div class="icon_img">
                     <img src=${object.iconSrc} alt="${
@@ -329,7 +364,12 @@ function thumnailVideoCreate(parentIndex, myIndex) {
 
   let myObject = page[parentIndex];
 
-  if (myObject.projectName !== "PICKET(BE 배포중단)" && myIndex === 0) {
+  const condition =
+    myObject.projectName !== "PICKET(BE 배포중단)" &&
+    myObject.projectName !== "중간이들(중앙대 간호학과 커뮤니티)" &&
+    myIndex === 0;
+
+  if (condition) {
     content = `
             <img src="${myObject.pageInfo[myIndex].thunmnailSrc}" />
         `;
@@ -384,7 +424,21 @@ function infoTextCreate(objectIndex, menuIndex = 0) {
 
   let innerList = ``;
 
-  if (menuIndex === 0 && myObject.projectName.includes("PICKET")) {
+  if (menuIndex === 0 && myObject.projectName.includes("중간이들")) {
+    innerList = `
+            <h2 class="project_name">${myObject.projectName}</h2>
+            <h2 class="project_sub_title">주요 특징</h2>
+            <p class="project_ment"><span class="accent">디렉토리 구조화</span> 밑 기능별로 <span class="accent">API 함수</span>를 <span class="accent">분리</span>하여 <span class="accent">재사용성</span>과 <span class="accent">효율성</span>을 높였으며, 스타일드 컴포넌트로 <span class="accent">공통 스타일</span>을 정의하여 <span class="accent">일관된 디자인 시스템</span>을 유지했습니다.</p>
+            <h2 class="project_sub_title">제작기간</h2>
+            <p class="project_ment">${myObject.pageInfo[0].makePeriod}</p>
+    
+            <h2 class="project_sub_title">사용기술</h2>
+            <p class="project_ment">${myObject.pageInfo[0].makeSkill}</p>
+
+            <h2 class="project_sub_title">제작인원</h2>
+            <p class="project_ment">${myObject.pageInfo[0].people}</p>
+        `;
+  } else if (menuIndex === 0 && myObject.projectName.includes("PICKET")) {
     innerList = `
             <h2 class="project_name">${myObject.projectName}</h2>
             <h2 class="project_sub_title">배포현황</h2>
@@ -460,6 +514,7 @@ function videoMaxViewControls(el) {
 
   document.addEventListener("fullscreenchange", ev);
 }
+
 /********************** modai_ev ******************/
 const sectionWrapper = document.getElementById("fullpage");
 const pagseWithOnlyCalc = document.querySelectorAll(".page");

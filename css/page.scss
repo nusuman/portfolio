@@ -287,10 +287,13 @@
           .page_list_area_design {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
             li {
+              width: 110px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
               position: relative;
               background-color: rgb(0, 0, 0);
               color: rgb(154, 154, 154);
@@ -299,7 +302,11 @@
               padding: 5px 10px;
               border: 2px solid white;
               cursor: pointer;
+              margin-right: 10px;
               margin-bottom: 10px;
+              &:nth-child(4n) {
+                margin-right: 0;
+              }
               &.project_tab_on {
                 color: white;
               }
@@ -382,55 +389,95 @@
             }
           }
         }
-        .project_list_design {
-          @include item_size(120px, 610px);
-          padding: 0 15px;
-          background-color: black;
-          border: 2px solid white;
-          box-shadow: 0px 1px 7px 0px black;
-          li {
-            position: relative;
-            margin-top: 20px;
-            user-select: none;
+        .swiper_container {
+          position: relative;
+          height: 610px;
+          .project_list_move_button {
+            position: absolute;
+            font-size: 65px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: none;
             cursor: pointer;
-            &::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              @include item_size(100%, 100%);
-              transition: all 0.3s;
-              background-color: rgba(0, 0, 0, 0.8);
-            }
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            transition: all 0.1s;
             &:hover {
-              &::after {
-                background-color: rgba(0, 0, 0, 0);
-              }
-              p {
-                border-bottom: 1px solid white;
-              }
+              color: rgb(216, 156, 234);
             }
-            .icon_img {
-              padding: 10px;
-              background-color: white;
-              border-bottom: 1px solid black;
-              img {
-                @include item_size(60px, 60px);
-                object-fit: cover;
-              }
+            .swiper-button-prev,
+            .swiper-button-next {
+              display: none;
             }
-            p {
-              padding-bottom: 2px;
-              margin-top: 5px;
-              font-size: 1.8rem;
-              border-bottom: 1px solid black;
-            }
-            &.project_on {
-              &::after {
-                display: none;
-              }
-              p {
-                border-bottom: 1px solid white;
+          }
+
+          .prev_move_button {
+            top: -70px;
+          }
+          .next_move_button {
+            bottom: -70px;
+          }
+
+          .swiper {
+            @include item_size(120px, 100%);
+            padding: 0 15px;
+            background-color: black;
+            border: 2px solid white;
+            box-shadow: 0px 1px 7px 0px black;
+            .swiper-wrapper {
+              li {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                position: relative;
+                user-select: none;
+                cursor: pointer;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  @include item_size(100%, 100%);
+                  transition: all 0.3s;
+                  background-color: rgba(0, 0, 0, 0.8);
+                }
+                &:hover {
+                  &::after {
+                    background-color: rgba(0, 0, 0, 0);
+                  }
+                  p {
+                    border-bottom: 1px solid white;
+                  }
+                }
+                .icon_img {
+                  padding: 10px;
+                  background-color: white;
+                  border-bottom: 1px solid black;
+                  img {
+                    @include item_size(60px, 60px);
+                    object-fit: cover;
+                  }
+                }
+                p {
+                  width: 100%;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  padding-bottom: 2px;
+                  margin-top: 5px;
+                  font-size: 1.8rem;
+                  border-bottom: 1px solid black;
+                }
+                &.project_on {
+                  &::after {
+                    display: none;
+                  }
+                  p {
+                    border-bottom: 1px solid white;
+                  }
+                }
               }
             }
           }

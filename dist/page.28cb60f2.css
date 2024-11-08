@@ -350,11 +350,14 @@ h2 {
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li {
+  width: 110px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   position: relative;
   background-color: rgb(0, 0, 0);
   color: rgb(154, 154, 154);
@@ -363,7 +366,11 @@ h2 {
   padding: 5px 10px;
   border: 2px solid white;
   cursor: pointer;
+  margin-right: 10px;
   margin-bottom: 10px;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li:nth-child(4n) {
+  margin-right: 0;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li.project_tab_on {
   color: white;
@@ -448,21 +455,53 @@ h2 {
 .section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .link_btn_list_design li .accent {
   color: #ffbf00;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design {
-  width: 120px;
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container {
+  position: relative;
   height: 610px;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .project_list_move_button {
+  position: absolute;
+  font-size: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  transition: all 0.1s;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .project_list_move_button:hover {
+  color: rgb(216, 156, 234);
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .project_list_move_button .swiper-button-prev,
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .project_list_move_button .swiper-button-next {
+  display: none;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .prev_move_button {
+  top: -70px;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .next_move_button {
+  bottom: -70px;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .swiper {
+  width: 120px;
+  height: 100%;
   padding: 0 15px;
   background-color: black;
   border: 2px solid white;
   box-shadow: 0px 1px 7px 0px black;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li {
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .swiper .swiper-wrapper li {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   position: relative;
-  margin-top: 20px;
   user-select: none;
   cursor: pointer;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li::after {
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .swiper .swiper-wrapper li::after {
   content: "";
   position: absolute;
   top: 0;
@@ -472,32 +511,36 @@ h2 {
   transition: all 0.3s;
   background-color: rgba(0, 0, 0, 0.8);
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li:hover::after {
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .swiper .swiper-wrapper li:hover::after {
   background-color: rgba(0, 0, 0, 0);
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li:hover p {
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .swiper .swiper-wrapper li:hover p {
   border-bottom: 1px solid white;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li .icon_img {
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .swiper .swiper-wrapper li .icon_img {
   padding: 10px;
   background-color: white;
   border-bottom: 1px solid black;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li .icon_img img {
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .swiper .swiper-wrapper li .icon_img img {
   width: 60px;
   height: 60px;
   object-fit: cover;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li p {
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .swiper .swiper-wrapper li p {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   padding-bottom: 2px;
   margin-top: 5px;
   font-size: 1.8rem;
   border-bottom: 1px solid black;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li.project_on::after {
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .swiper .swiper-wrapper li.project_on::after {
   display: none;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li.project_on p {
+.section_wrpper_design .project_page_design .project_container .project_box_design .swiper_container .swiper .swiper-wrapper li.project_on p {
   border-bottom: 1px solid white;
 }
 .section_wrpper_design .project_page_design .section_bg {

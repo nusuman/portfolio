@@ -160,6 +160,593 @@ const data = {
   //탭 메뉴를 클릭할시 해당 밸류값을 받아와서 객체 타입과 일치하는지 판단 -> 리스트를 뽑아내자.
   page: [
     {
+      projectName: "중간이들(중앙대 간호학과 커뮤니티)",
+      menuKind: [
+        "All",
+        "Community",
+        "Post Create/Put",
+        "Post Detail",
+        "Post Search",
+        "Admin/Sign In",
+        "Admin/Report History",
+        "Admin/Member Management",
+        "Admin/User Approval",
+        "Admin/Posts&Comments Management",
+      ],
+      etcKind: [
+        "Apis",
+        "Layouts",
+        "Common Components",
+        "Common Styles",
+        "Theme",
+        "Custom Hooks",
+        "Store",
+        "Slices",
+        "Router",
+        "Utils",
+      ],
+      hoverColor: ["FFBF00"],
+      iconSrc: ["./images/picket.png"],
+      iframeStyle: [
+        "width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;",
+      ],
+      sandBoxValue: ["allow-scripts allow-same-origin"],
+      pageInfo: [
+        {
+          type: "All",
+          makePeriod: "2024-08-19 ~ 2024-10-30",
+          makeSkill: [
+            "<span class=accent>React</span>",
+            "<span class=accent>Vite</span>",
+            "<span class=accent>Axios</span>",
+            "<span class=accent>Styled-Components</span>",
+            "<span class=accent>React-Router-Dom</span>",
+            "<span class=accent>React-Hook-Form</span>",
+            "<span class=accent>Redux-Tool-Kit</span>",
+          ],
+          setting: ["React-Vite"],
+          people: [
+            "기획: 2인, 제작: <span class = accent>BE(1인)</span>, <span class = accent>FE(2인)</span>",
+          ],
+          videoSrc: ["./videos/picket/total_videos.mp4"],
+        },
+        {
+          type: "Community",
+          pageContents: ["페이지네이션", "페이지 정렬"],
+          episode: [
+            "커뮤니티 페이지에서는 작성된 글 목록을 볼 수 있습니다. <br /><span class = accent>페이지네이션</span>기능을 이용하여 각 페이지를 넘길 수 있고, 정렬 기능을 통하여 각 옵션에 맞게 게시글 목록을 <span class = accent>정렬</span> 할 수 있습니다. <br />게시글 작성 밑 상세 보기는 <span class = accent>정회원 상태 일 때</span> 이용 가능하게 구현 했습니다.",
+          ],
+          videoSrc: ["./videos/picket/home.mp4"],
+          codeInfo: [
+            {
+              codeName: "Community(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Community",
+              src: ["https://carbon.now.sh/embed/4LqtiPwOal2gDWrnRzMr"],
+            },
+            {
+              codeName: "Community Post(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Community > Community Post",
+              src: ["https://carbon.now.sh/embed/feShsJDbgjr8eWTuHzeO"],
+            },
+          ],
+        },
+        {
+          type: "Post Create/Put",
+          pageContents: [
+            "파일 업로드/삭제",
+            "이미지 업로드/복사&붙여넣기/삭제",
+            "카카오 API 이용 하여 병원 찾기",
+          ],
+          episode: [
+            "게시글 작성/수정 페이지는 TinyMCE Editor를 이용하여 <br /><span class = accent>파일 업로드/입력 문자 갯수 체크/이미지 업로드&복사&붙여넣기/파일 삭제</span> 등 기본적으로 게시글을 작성 밑 수정할 때 필수적이라고 생각 되는 기능은 전부 구현하였습니다. <br/> 또한 <span class = accent>카카오 API</span>를 이용하여 <span class = accent>병원 찾기</span> 밑 <span class = accent>지도 띄우기</span> 기능을 구현하였습니다.",
+          ],
+          videoSrc: ["./videos/picket/browse.mp4"],
+          codeInfo: [
+            {
+              codeName: "Create Community Post(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Create Commnunity Post",
+              src: ["https://carbon.now.sh/embed/AAJIp1gRosyFnRxPMClc"],
+            },
+            {
+              codeName: "Post Create Editor(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Create Commnunity Post > Post Create Editor",
+              src: ["https://carbon.now.sh/embed/MXsKwUWI9p2oPDv9Hc6f"],
+            },
+            {
+              codeName: "Upload File list(INDEX).JSX",
+              themeColor: "orange",
+              codeType:
+                "Create Commnunity Post > Post Create Editor > Upload File list",
+              src: ["https://carbon.now.sh/embed/9A6zOd6GYlT0fhunJMWR"],
+            },
+            {
+              codeName: "Hospital Search Modal(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Create Commnunity Post > Hospital Search Modal",
+              src: ["https://carbon.now.sh/embed/rn4nWO9Fvem8QHCfy3Xb"],
+            },
+            {
+              codeName: "Kakao Map(INDEX).JSX",
+              themeColor: "orange",
+              codeType:
+                "Create Commnunity Post > Hospital Search Modal > Kakao Map",
+              src: ["https://carbon.now.sh/embed/cckEj1YTtmMjB6XmzFlh"],
+            },
+            {
+              codeName: "Buttons(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Create Commnunity Post > Buttons",
+              src: ["https://carbon.now.sh/embed/c5eeYdPjMqkw7lAZHsPR"],
+            },
+            {
+              codeName: "Category Select Menus(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Create Commnunity Post > Category Select Menus",
+              src: ["https://carbon.now.sh/embed/SP4VqvwbX5YTCclbUdX1"],
+            },
+          ],
+        },
+        {
+          type: "Post Detail",
+          pageContents: [
+            "게시글 좋아요/스크랩",
+            "게시글 수정/삭제/신고",
+            "댓글 작성/수정/삭제/신고",
+            "현재 클릭한 게시글 표시",
+            "페이지네이션",
+          ],
+          episode: [
+            "게시글 상세보기 페이지는 <span class = accent>상단의 카테고리</span> 밑 <span class = accent>하단의 다른 게시글 목록</span> 등을 통해 게시글 탐색을 좀 더 편하게 할 수 있도록 하였습니다.<br /> 또한 <span class = accent>게시글 좋아요/스크랩/삭제/수정/신고</span> 기능, <span class = accent>댓글 작성/수정/삭제/신고 기능, </span> <span class = accent>댓글</span> 밑 <span class = accent>다른 게시글 목록</span> <span class = accent>페이지네이션</span>을 통해 이용자가 불편함 없이 서비스를 이용할 수 있도록 페이지를 구성 하였습니다.",
+          ],
+          videoSrc: ["./videos/picket/profile.mp4"],
+          codeInfo: [
+            {
+              codeName: "Post Detail(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Post Detail",
+              src: ["https://carbon.now.sh/embed/FbjkZXOqfkZY9WouSL1J"],
+            },
+            {
+              codeName: "Attachments(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Post Detail > Post Header > Attachments",
+              src: ["https://carbon.now.sh/embed/dUh2Q1YndFBUid4EfldY"],
+            },
+            {
+              codeName: "Comment Create(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Post Detail > Comment Create",
+              src: ["https://carbon.now.sh/embed/gStCvq705Oozfwmaq0V8"],
+            },
+            {
+              codeName: "Post Comment Area(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Post Detail > Post Comment Area",
+              src: ["https://carbon.now.sh/embed/TOPNhOftLr9jDMsQUGzn"],
+            },
+            {
+              codeName: "Post Comment List(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Post Detail > Post Comment Area > Post Comment List",
+              src: ["https://carbon.now.sh/embed/2Yatl7RpE3pgd46aYlmy"],
+            },
+            {
+              codeName: "Other Posts(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Post Detail > Other Posts",
+              src: ["https://carbon.now.sh/embed/aBbnEJwduxK6RReLENQS"],
+            },
+            {
+              codeName: "Other Post List(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Post Detail > Other Posts > Other Post List",
+              src: ["https://carbon.now.sh/embed/Yp91jy7VKT2V1BXIyP1J"],
+            },
+            {
+              codeName: "Modals(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Post Detail > Modals",
+              src: ["https://carbon.now.sh/embed/Z3PwHIaSnawUdCCuEoi9"],
+            },
+            {
+              codeName: "More Popup(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Post Detail > More Popup",
+              src: ["https://carbon.now.sh/embed/J3z2VW7KUiSw0FALJyMF"],
+            },
+          ],
+        },
+        {
+          type: "Post Search",
+          pageContents: [
+            "게시글 검색",
+            "디바운스 기능",
+            "게시글 분류 기능",
+            "검색 키워드 표시 기능",
+            "페이지네이션",
+          ],
+          episode: [
+            "<span class = accent>메인 페이지</span> 밑 상단의 <span class = accent>SEARCH BAR</span>등을 통해 검색을 할 수 있으며, 이용자가 검색한 키워드가 <span class = accent>제목</span>이나 <span class = accent>내용</span>에 포함된 경우, 해당 게시글이 검색 결과에 표시됩니다. <br />왼쪽의 <span class = accent>분류</span> 기능을 통해 각 게시판 종류별로 검색 결과를 볼 수 있으며, <span class = accent>검색 키워드 표시</span> 기능을 통해 한층 더 가독성을 높였습니다.",
+          ],
+          videoSrc: ["./videos/picket/detail_bucket.mp4"],
+          codeInfo: [
+            {
+              codeName: "Post Search(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Post Search",
+              src: ["https://carbon.now.sh/embed/nUNLBI4e7dMa6aHGj42D"],
+            },
+          ],
+        },
+        {
+          type: "Admin/Sign In",
+          pageContents: ["로그인", "로그인 입력 검증"],
+          episode: [
+            "관리자 페이지를 이용하기 위해서는 반드시 해당 로그인 페이지를 이용하여 로그인을 해야하며 <span class = accent>REACT-HOOK-FORM</span>을 통해 보다 간편하게 입력 검증과 에러 핸들을 하였습니다.",
+          ],
+          videoSrc: ["./videos/picket/addbucket.mp4"],
+          codeInfo: [
+            {
+              codeName: "Admin Sign In(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Admin > Admin Sign In",
+              src: ["https://carbon.now.sh/embed/4yyKJVLssVpQvKcARXYs"],
+            },
+          ],
+        },
+        {
+          type: "Admin/Report History",
+          pageContents: ["신고된 게시글/댓글 조회 밑 처리, 페이지네이션"],
+          episode: [
+            "해당 페이지에서는 신고된 게시글 밑 댓글들을 처리 할 수 있습니다. <br/>또한 리스트를 클릭하여 신고된 게시물들을 상세 조회 할 수 있습니다. ",
+          ],
+          videoSrc: ["./videos/picket/sign_in.mp4"],
+          codeInfo: [
+            {
+              codeName: "Report History(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Admin > Report History",
+              src: ["https://carbon.now.sh/embed/cAKtFPp6tdzmQSHAAWry"],
+            },
+          ],
+        },
+        {
+          type: "Admin/Member Management",
+          pageContents: ["회원 정지/탈퇴 기능, 검색 기능, 페이지네이션"],
+          episode: [
+            "회원 관리 페이지에서는 <span class = accent>ID, 닉네임</span> 등의 검색 옵션을 함께 제공하여 보다 회원을 <span class = accent>쉽게</span> 찾을 수 있게 하였으며, <br /><span class = accent>정지</span> 또는 <span class = accent>탈퇴</span>를 클릭 할 시 <span class = accent>모달</span>을 띄워 이용자가 어떠한 사유로 정지/탈퇴를 당하였는지 알 수 있도록 구현 하였습니다.",
+          ],
+          videoSrc: ["./videos/picket/sign_up.mp4"],
+          codeInfo: [
+            {
+              codeName: "Member Management(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Member Management",
+              src: ["https://carbon.now.sh/embed/l2b4t0dUUbds4AgJG12z"],
+            },
+          ],
+        },
+        {
+          type: "Admin/User Approval",
+          pageContents: ["회원가입 승인/거절 기능, 페이지네이션"],
+          episode: [
+            /* <span class = accent></span> */
+            "회원가입 승인 페이지에서는 회원가입을  <span class = accent>승인/거절</span> 할 수 있으며 거절 시  <span class = accent>기간 선택 밑 사유</span>를 입력하게 하는 등 <br />관리자가 보다 상세하게 거절 할 수 있도록 기능들을 구현 하였습니다.",
+          ],
+          videoSrc: ["./videos/picket/pwresearch.mp4"],
+          codeInfo: [
+            {
+              codeName: "User Approval(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "User Approval",
+              src: ["https://carbon.now.sh/embed/yiE64XJpnY2rwd4i5pw3"],
+            },
+          ],
+        },
+
+        {
+          type: "Admin/Posts&Comments Management",
+          pageContents: [
+            "게시글/댓글 삭제 기능",
+            "게시글/댓글 상세 조회",
+            "검색 기능",
+            "페이지네이션",
+          ],
+          episode: [
+            /* <span class = accent></span> */
+            "게시글/댓글 관리 페이지에서는 관리 편의를 높이기 위해, 삭제 버튼을 누른 후 <span class = accent>원하는 페이지</span>별로 리스트를 선택하여 삭제할 수 있도록 구성했습니다.<br />예를 들어, <span class = accent>1페이지에서 5, 6, 9번 리스트와 2페이지에서 11, 14, 17번 리스트</span>를 선택하여 <span class = accent>총 6개 항목</span>을 일괄 삭제할 수 있습니다. 또한, 리스트를 클릭하면 해당 <span class = accent>게시글이나 댓글</span>의 상세 정보와 <span class = accent>링크</span>가 제공되어, 쉽게 해당 게시글이나 댓글로 이동할 수 있도록 하여 관리 효율성을 높였습니다.",
+          ],
+          videoSrc: ["./videos/picket/search.mp4"],
+          codeInfo: [
+            {
+              codeName: "Posts And Comments Management(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Posts And Comments Management",
+              src: ["https://carbon.now.sh/embed/EL34quxy45CZNgVjYPPV"],
+            },
+          ],
+        },
+        {
+          type: "Apis",
+          codeInfo: [
+            {
+              codeName: "Axios Instance.JS",
+              themeColor: "yellow",
+              codeType: "Api > Axios Instance",
+              src: ["https://carbon.now.sh/embed/85kMU1RPHrQHEqNA4dVg"],
+            },
+            {
+              codeName: "Post Api.JS",
+              themeColor: "yellow",
+              codeType: "Api > Post Api",
+              src: ["https://carbon.now.sh/embed/PmumxQNan1iJ1rOa1XL9"],
+            },
+            {
+              codeName: "Comment Api.JS",
+              themeColor: "yellow",
+              codeType: "Api > Comment Api",
+              src: ["https://carbon.now.sh/embed/RJSfwp5KZ6C6FzGaztCF"],
+            },
+            {
+              codeName: "Admin Api.JS",
+              themeColor: "yellow",
+              codeType: "Api > Admin Api",
+              src: ["https://carbon.now.sh/embed/xgzJTUw6J3hZNHSMWb0M"],
+            },
+            {
+              codeName: "Report Api.JS",
+              themeColor: "yellow",
+              codeType: "Api > Admin Api",
+              src: ["https://carbon.now.sh/embed/x9AIBQOpYCKUFNjXpT6w"],
+            },
+          ],
+        },
+        {
+          type: "Layouts",
+          codeInfo: [
+            {
+              codeName: "Layouts(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Layouts",
+              src: ["https://carbon.now.sh/embed/34kp6LYVBDsdxpT7z5du"],
+            },
+            {
+              codeName: "Nav Bar(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Layouts > Nav Bar",
+              src: ["https://carbon.now.sh/embed/SyAmVXztaGMXISzEwi8L"],
+            },
+          ],
+        },
+        {
+          type: "Common Components",
+          codeInfo: [
+            {
+              codeName: "Pagination(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Components > Pagination",
+              src: ["https://carbon.now.sh/embed/0D8k0oTVVHuwRnzBRn1a"],
+            },
+            {
+              codeName: "Page Number(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Components > Pagination > Page Number",
+              src: ["https://carbon.now.sh/embed/3mCc945M9PUUqYvkw0kz"],
+            },
+            {
+              codeName: "Loading(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Components > Loading",
+              src: ["https://carbon.now.sh/embed/cxs9nJkTSRaLPCu0LDYO"],
+            },
+            {
+              codeName: "Page Category(INDEX).JSX",
+              themeColor: "orange",
+              codeType: "Components > Page Category",
+              src: ["https://carbon.now.sh/embed/26otfvsoTg3SFtdFR2Na"],
+            },
+          ],
+        },
+        {
+          type: "Common Styles",
+          codeInfo: [
+            {
+              codeName: "Local Text Style.JS",
+              themeColor: "yellow",
+              codeType: "Styles > Common Style > Local Text Style",
+              src: ["https://carbon.now.sh/embed/3JRJ88qsGumlec3KWeom"],
+            },
+            {
+              codeName: "Text.JS",
+              themeColor: "yellow",
+              codeType: "Styles > Common Style > Text",
+              src: ["https://carbon.now.sh/embed/f7WXqjvh3uodUJjLrIIN"],
+            },
+            {
+              codeName: "Box.JS",
+              themeColor: "yellow",
+              codeType: "Styles > Common Style > Box",
+              src: ["https://carbon.now.sh/embed/Q6tvWU5yTtmXFSVwhNBm"],
+            },
+            {
+              codeName: "Etc.JS",
+              themeColor: "yellow",
+              codeType: "Styles > Common Style > Etc",
+              src: ["https://carbon.now.sh/embed/2aFdLxFHOg00mhhvhRra"],
+            },
+          ],
+        },
+        {
+          type: "Theme",
+          codeInfo: [
+            {
+              codeName: "Theme.JS",
+              themeColor: "yellow",
+              codeType: "Styles > Theme",
+              src: ["https://carbon.now.sh/embed/5LKqWRVQqYoYpG9crphU"],
+            },
+            {
+              codeName: "Typography.JS",
+              themeColor: "yellow",
+              codeType: "Styles > Typography",
+              src: ["https://carbon.now.sh/embed/4gLiIL6M6hl4aUxJH24x"],
+            },
+            {
+              codeName: "Colors.JS",
+              themeColor: "yellow",
+              codeType: "Styles > Colors",
+              src: ["https://carbon.now.sh/embed/pKfdxAb1zCxa2ldsHuTv"],
+            },
+            {
+              codeName: "GlobalStyle.JS",
+              themeColor: "yellow",
+              codeType: "Styles > GlobalStyle",
+              src: ["https://carbon.now.sh/embed/RIH5U9BZB2rk3RL1zSKd"],
+            },
+          ],
+        },
+        {
+          type: "Custom Hooks",
+          codeInfo: [
+            {
+              codeName: "useFetchAndPaginate.JS",
+              themeColor: "yellow",
+              codeType: "Hooks > useFetchAndPaginate",
+              src: ["https://carbon.now.sh/embed/pimzEOx8NEqIVf9GovsK"],
+            },
+            {
+              codeName: "useTinyMceUpload.JS",
+              themeColor: "yellow",
+              codeType: "Hooks > useTinyMceUpload",
+              src: ["https://carbon.now.sh/embed/p21RFiBTw03YJktE7EF0"],
+            },
+            {
+              codeName: "useModalsControl.JS",
+              themeColor: "yellow",
+              codeType: "Hooks > useModalsControl",
+              src: ["https://carbon.now.sh/embed/f9EQ2GPgmVPuGcPlB4W0"],
+            },
+            {
+              codeName: "usePostSearch.JS",
+              themeColor: "yellow",
+              codeType: "Hooks > usePostSearch",
+              src: ["https://carbon.now.sh/embed/UjS9pA3XhNGVRM9vRGxt"],
+            },
+            {
+              codeName: "useSelectorList.JS",
+              themeColor: "yellow",
+              codeType: "Hooks > useSelectorList",
+              src: ["https://carbon.now.sh/embed/h2OFzgPdOSLZR9f8WiWq"],
+            },
+          ],
+        },
+        {
+          type: "Store",
+          codeInfo: [
+            {
+              codeName: "Store.JS",
+              themeColor: "yellow",
+              codeType: "Store > Store",
+              src: ["https://carbon.now.sh/embed/uVinTpd7rrG2pio5mF6P"],
+            },
+          ],
+        },
+        {
+          type: "Slices",
+          codeInfo: [
+            {
+              codeName: "Modals Control.JS",
+              themeColor: "yellow",
+              codeType: "Store > Modals Control",
+              src: ["https://carbon.now.sh/embed/nKeQHl4FKS9w4SsY3JUr"],
+            },
+            {
+              codeName: "Nav Bar Options.JS",
+              themeColor: "yellow",
+              codeType: "Store > Nav Bar Options",
+              src: ["https://carbon.now.sh/embed/rwmA2OVsn0CRwp9ZJZMc"],
+            },
+            {
+              codeName: "Locations.JS",
+              themeColor: "yellow",
+              codeType: "store > Locations",
+              src: ["https://carbon.now.sh/embed/NL1d28ZeswAmuncS4BCq"],
+            },
+          ],
+        },
+        {
+          type: "Router",
+          codeInfo: [
+            {
+              codeName: "Router.JSX",
+              themeColor: "greenyellow",
+              codeType: "Routes > Router",
+              src: ["https://carbon.now.sh/embed/fcg6qw6ufZNMJUxc94cm"],
+            },
+          ],
+        },
+        {
+          type: "Utils",
+          codeInfo: [
+            {
+              codeName: "Sweet Alert(INDEX).JS",
+              themeColor: "yellow",
+              codeType: "Utils > Sweet Alert",
+              src: ["https://carbon.now.sh/embed/c5iTWUcnY0Vm7Q74V69D"],
+            },
+            {
+              codeName: "Date Formatting(INDEX).JS",
+              themeColor: "yellow",
+              codeType: "Utils > Date Formatting",
+              src: ["https://carbon.now.sh/embed/TRx2XPv1grKP9mifmp5f"],
+            },
+            {
+              codeName: "White Space Check(INDEX).JS",
+              themeColor: "yellow",
+              codeType: "Utils > White Space Check",
+              src: ["https://carbon.now.sh/embed/82IbO767uXKhziwGBSjK"],
+            },
+          ],
+        },
+      ],
+      link: [
+        {
+          url: "#!",
+          ment: "<span class=accent>코드 보기</span>",
+          className: "code_view_btn",
+          blank: false,
+        },
+        {
+          url: "https://www.caugannies.com/",
+          ment: "사이트 보기",
+          className: "site_view_btn",
+          blank: true,
+        },
+        {
+          url: "https://github.com/Gannies/Gannies_FrontEnd/tree/dev/src",
+          ment: "<span class=accent>디렉토리 구조</span>",
+          className: "directory_view_btn",
+          blank: true,
+        },
+        {
+          url: "https://github.com/neptune588/Gannies_FrontEnd",
+          ment: "GITHUB",
+          className: "read_me_btn",
+          blank: true,
+        },
+        {
+          url: "https://github.com/Gannies",
+          ment: "GITHUB/TEAM",
+          className: "read_me_btn",
+          blank: true,
+        },
+      ],
+    },
+    {
       projectName: "PICKET(BE 배포중단)",
       menuKind: [
         "ALL",
