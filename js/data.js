@@ -186,7 +186,7 @@ const data = {
         "Utils",
       ],
       hoverColor: ["FFBF00"],
-      iconSrc: ["./images/picket.png"],
+      iconSrc: ["./images/caugannies.png"],
       iframeStyle: [
         "width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;",
       ],
@@ -254,7 +254,7 @@ const data = {
               codeName: "Post Create Editor(INDEX).JSX",
               themeColor: "orange",
               codeType: "Create Commnunity Post > Post Create Editor",
-              src: ["https://carbon.now.sh/embed/MXsKwUWI9p2oPDv9Hc6f"],
+              src: ["https://carbon.now.sh/embed/ozgugZAhNebCTsdg3KEQ"],
             },
             {
               codeName: "Upload File list(INDEX).JSX",
@@ -622,7 +622,7 @@ const data = {
               codeName: "useTinyMceUpload.JS",
               themeColor: "yellow",
               codeType: "Hooks > useTinyMceUpload",
-              src: ["https://carbon.now.sh/embed/p21RFiBTw03YJktE7EF0"],
+              src: ["https://carbon.now.sh/embed/i8QmDNmFhFKzXc4wLVPy"],
             },
             {
               codeName: "useModalsControl.JS",

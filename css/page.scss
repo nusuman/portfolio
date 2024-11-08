@@ -457,7 +457,7 @@
                   border-bottom: 1px solid black;
                   img {
                     @include item_size(60px, 60px);
-                    object-fit: cover;
+                    object-fit: contain;
                   }
                 }
                 p {

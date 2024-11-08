@@ -231,7 +231,7 @@ var data = exports.data = {
     menuKind: ["All", "Community", "Post Create/Put", "Post Detail", "Post Search", "Admin/Sign In", "Admin/Report History", "Admin/Member Management", "Admin/User Approval", "Admin/Posts&Comments Management"],
     etcKind: ["Apis", "Layouts", "Common Components", "Common Styles", "Theme", "Custom Hooks", "Store", "Slices", "Router", "Utils"],
     hoverColor: ["FFBF00"],
-    iconSrc: ["./images/picket.png"],
+    iconSrc: ["./images/caugannies.png"],
     iframeStyle: ["width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;"],
     sandBoxValue: ["allow-scripts allow-same-origin"],
     pageInfo: [{
@@ -271,7 +271,7 @@ var data = exports.data = {
         codeName: "Post Create Editor(INDEX).JSX",
         themeColor: "orange",
         codeType: "Create Commnunity Post > Post Create Editor",
-        src: ["https://carbon.now.sh/embed/MXsKwUWI9p2oPDv9Hc6f"]
+        src: ["https://carbon.now.sh/embed/ozgugZAhNebCTsdg3KEQ"]
       }, {
         codeName: "Upload File list(INDEX).JSX",
         themeColor: "orange",
@@ -538,7 +538,7 @@ var data = exports.data = {
         codeName: "useTinyMceUpload.JS",
         themeColor: "yellow",
         codeType: "Hooks > useTinyMceUpload",
-        src: ["https://carbon.now.sh/embed/p21RFiBTw03YJktE7EF0"]
+        src: ["https://carbon.now.sh/embed/i8QmDNmFhFKzXc4wLVPy"]
       }, {
         codeName: "useModalsControl.JS",
         themeColor: "yellow",
@@ -2091,7 +2091,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54333" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62873" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
