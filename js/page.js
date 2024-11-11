@@ -428,7 +428,9 @@ function infoTextCreate(objectIndex, menuIndex = 0) {
     innerList = `
             <h2 class="project_name">${myObject.projectName}</h2>
             <h2 class="project_sub_title">주요 특징</h2>
-            <p class="project_ment"><span class="accent">디렉토리 구조화</span> 밑 기능별로 <span class="accent">API 함수</span>를 <span class="accent">분리</span>하여 <span class="accent">재사용성</span>과 <span class="accent">효율성</span>을 높였으며, 스타일드 컴포넌트로 <span class="accent">공통 스타일</span>을 정의하여 <span class="accent">일관된 디자인 시스템</span>을 유지했습니다.</p>
+            <p class="project_ment"><span class="accent">디렉토리 구조화</span> 밑 기능별로 <span class="accent">API 함수</span>를 <span class="accent">분리</span>하여 <span class="accent">재사용성</span>과 <span class="accent">효율성</span>을 높였으며, 스타일드 컴포넌트로 <span class="accent">공통 스타일</span>을 정의하여 <span class="accent">일관된 디자인 시스템</span>을 유지했습니다.<br />
+            <span class="accent">유튜브:</span> <a href="https://youtu.be/XeknnOg0EK0?si=JBqIn6kF6puklS3Y" target=_blank>https://youtu.be/XeknnOg0EK0?si=JBqIn6kF6puklS3Y</p>
+
             <h2 class="project_sub_title">제작기간</h2>
             <p class="project_ment">${myObject.pageInfo[0].makePeriod}</p>
     
