@@ -194,7 +194,7 @@ const data = {
       pageInfo: [
         {
           type: "All",
-          makePeriod: "2024-08-19 ~ 2024-10-30",
+          makePeriod: "2024-08-12 ~ 2024-10-23",
           makeSkill: [
             "<span class=accent>React</span>",
             "<span class=accent>Vite</span>",
