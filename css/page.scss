@@ -353,11 +353,17 @@
               border-bottom: 2px solid white;
             }
             .project_ment {
+              user-select: text !important;
               line-height: 30px;
               font-size: 1.6rem;
               margin-bottom: 20px;
               .accent {
                 color: rgb(255, 240, 31);
+              }
+              .link_hover {
+                &:hover {
+                  color: rgb(255, 240, 31);
+                }
               }
             }
           }

@@ -420,11 +420,15 @@ h2 {
   border-bottom: 2px solid white;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .info_text_area_design .project_ment {
+  user-select: text !important;
   line-height: 30px;
   font-size: 1.6rem;
   margin-bottom: 20px;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .info_text_area_design .project_ment .accent {
+  color: rgb(255, 240, 31);
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .info_text_area_design .project_ment .link_hover:hover {
   color: rgb(255, 240, 31);
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .link_btn_list_design {
